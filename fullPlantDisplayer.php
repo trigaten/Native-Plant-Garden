@@ -1,0 +1,4 @@
+<?php
+$plantname = "gourd";
+
+?>
