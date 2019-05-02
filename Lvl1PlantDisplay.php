@@ -1,9 +1,15 @@
 <?php
+//.gets location of plant in spreadsheet
+$plantName = "gourd";
+$latinName = "gourdous plantanous";
+$image = "Imagepathblahblah";
 
-$plantname = "gourd";
+$family = "";
+$growthForm = "";
+$bloomTime = "";
+$wetlandStatus = "";
+$endangered = "";
 
-
-         
 
 // <tr></tr><td>&nbsp;&nbsp;&nbsp;Common Name: <?php echo escape($rowS["CommonName"]);?></td>
 // <tr></tr><td>&nbsp;&nbsp;&nbsp;Bloom Time: <?php echo escape($rowS["BloomTime"]); ?></td>
