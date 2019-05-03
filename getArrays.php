@@ -1,6 +1,6 @@
 <?php
-require_once 'google-api-php-client-2.2.2/vendor/autoload.php';
-    $client = new \Google_Client();
+require_once 'google-api-php-client-2.2.2/vendor/autoload.php'; // getting necessary files
+    $client = new \Google_Client(); // setting up client
     $client->setApplicationName('PlantApp');
     $client->setScopes([\Google_Service_Sheets::SPREADSHEETS]);
     $client->setAccessType('offline');
@@ -8,30 +8,22 @@ require_once 'google-api-php-client-2.2.2/vendor/autoload.php';
     $service = new Google_Service_Sheets($client);
     $spreadsheetId = "1v6i3MFlBfTom7p_WZHs-hK850D2pTg2kk4XJbrLlkd8";
 
+    
+    function getPlantingLog(){
+
     $range = 'Planting Log';
     $response = $service->spreadsheets_values->get($spreadsheetId, $range);
     $values = $response->getValues();
-    if (empty($values)) {
-        print 'No data found.\n';
-    } else {
+    
+    return $values;
+    }
 
-        foreach ($values as $row) {
-            if ($row[1] == $_GET["Name"]){
-            for ($i = 0; $i < sizeof($row); $i++) {
-                if ($i != 1 && $i != 9 && $row[$i] != null){
-                    echo $row[$i]." -- ";
-                }
-                }
-                echo printImage($row[0]);
-                echo "<br>";
-            }
-            
-        }
-    }
-    function getPlantingLog(){
-    return void;
-    }
     function getPlantCharacteristics(){
-    return void;
+
+    $range = 'Plant characteristics and notes';
+    $response = $service->spreadsheets_values->get($spreadsheetId, $range);
+    $values = $response->getValues();
+    
+    return $values;
     }
 ?>
