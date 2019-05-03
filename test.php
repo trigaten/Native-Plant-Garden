@@ -1,6 +1,8 @@
 <?php
-include ("getImage.php");
-echo getImage("cat");
-echo getUrl("frog");
+include ("arrayDownloader.php");
+echo "ff";
+$ob = new arrayDownloader();
+$b = $ob->getPlantingLog();
 
+echo "ff$b";
 ?>
