@@ -1,4 +1,6 @@
 <?php
+
+
 function getImage($query) {
     $image_url = getURL($query);
     return '<img src="' . $image_url . '" alt="error">'; 
