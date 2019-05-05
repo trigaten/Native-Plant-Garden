@@ -2,19 +2,31 @@
 //.gets location of plant in spreadsheet
 $plantName = "gourd";
 $latinName = "gourdous plantanous";
-$image = "Imagepathblahblah";
+$image = "images/Adiantum pedatum.jpg";
 
-$family = "";
-$growthForm = "";
-$bloomTime = "";
-$wetlandStatus = "";
-$endangered = "";
+$family = "BlopBlop";
+$growthForm = "Blop";
+$bloomTime = "1o";
+$wetlandStatus = "Plob";
+$endangered = "Nop";
 
 
-// <tr></tr><td>&nbsp;&nbsp;&nbsp;Common Name: <?php echo escape($rowS["CommonName"]);?></td>
-// <tr></tr><td>&nbsp;&nbsp;&nbsp;Bloom Time: <?php echo escape($rowS["BloomTime"]); ?></td>
-// <tr></tr><td>&nbsp;&nbsp;&nbsp;Wetland Status: <?php echo escape($rowS["WetlandStatus"])?></td>
-// <tr></tr><td>&nbsp;&nbsp;&nbsp;Endangered: <?php echo escape($rowS["Endangered"])?></td>
-// <tr></tr><td>&nbsp;&nbsp;&nbsp;<a href="<?php echo escape($rowS["Link"]); ?>">Click here for more information</a><br><br></td> </tr>
+echo "<table style='width:100%'>";
+        echo "<tr>";
+        echo "<td>$family</td>";
+        echo "<td>fffffff</td>";
+        echo "<td>$family</td>";
+        echo "<td>fffffff</td>";
+        echo "</tr>";
+
+        echo "<tr>";
+        echo "<td>$family</td>";
+        echo "<td>fffffff</td>";
+        echo "<td>$family</td>";
+        echo "<td>fffffff</td>";
+        echo "</tr>";
+        echo "</table>";
+
        
 ?>
+
