@@ -3,8 +3,8 @@ include "printImage.php";
 include "arrayDownloader.php";
 echo $_GET['Name']."<br><br>";
 
-    $ob = new arrayDownloader(); 
-    $values = $ob->getPlantingLog();
+    $arrayGetter = new arrayDownloader(); 
+    $values = $arrayGetter->getPlantingLog();
     if (empty($values)) {
         print 'No data found.\n';
     } else {
