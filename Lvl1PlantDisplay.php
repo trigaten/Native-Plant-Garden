@@ -13,13 +13,14 @@ $wetlandStatus = "";
 $endangered = "";
 
 include "getImage.php";
+include "printImage.php";
 function displayLvl1($plant){
 $plantname = $plant;
 $directory_plantname = 'images/'.$plantname.".jpg";
 //echo $directory_plantname;
 if (file_exists($directory_plantname)) {
     echo "<table style='width:100%'>";
-        echo "<tr><img src=' . $directory_plantname . ' alt="error">";
+        echo '<tr><img src=' .$directory_plantname. " alt='error'>";
         echo "<td>$plantname</td>";
         echo "<td>$latinname</td>";
         echo "<td>$family</td>";
