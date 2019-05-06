@@ -1,5 +1,0 @@
-<?php
-$plantname = "l";
-
-
-?>
