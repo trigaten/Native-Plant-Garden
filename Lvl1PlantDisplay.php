@@ -12,13 +12,14 @@ $bloomTime = "yamyamyam";
 $wetlandStatus = "yam^4";
 $endangered = "yam^5";
 
+echo($family); 
+
 //include "getImage.php";
 //include "printImage.php";
 function displayLvl1($plant){
 $plantname = $plant; 
 //echo $directory_plantname;
-    echo "<table style='width:100%'>";
-        echo '<tr><img src=' .$directory_plantname. " alt='error'>";
+    echo "<table style='width:100%'><tr>";
         echo "<td>$plantname</td>";
         echo "<td>$latinname</td>";
         echo "<td>$family</td>";
