@@ -26,7 +26,7 @@ $plantname = $plant;
         echo "<td>$bloomTime</td>";
         echo "<td>$wetlandStatus</td>";
         echo "<td>$endangered</td>";
-        echo "</tr>";
+        echo "</tr>";}
 
 
 
