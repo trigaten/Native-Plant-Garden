@@ -12,8 +12,8 @@ $bloomTime = "yamyamyam";
 $wetlandStatus = "yam^4";
 $endangered = "yam^5";
 
-include "getImage.php";
-include "printImage.php";
+//include "getImage.php";
+//include "printImage.php";
 function displayLvl1($plant){
 $plantname = $plant; 
 //echo $directory_plantname;
