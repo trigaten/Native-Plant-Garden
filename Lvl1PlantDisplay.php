@@ -6,11 +6,11 @@ $plantName = "gourd";
 $latinName = "gourdous plantanous";
 $image = "Imagepathblahblah";
 
-$family = "";
-$growthForm = "";
-$bloomTime = "";
-$wetlandStatus = "";
-$endangered = "";
+$family = "yam";
+$growthForm = "yamyam";
+$bloomTime = "yamyamyam";
+$wetlandStatus = "yam^4";
+$endangered = "yam^5";
 
 include "getImage.php";
 include "printImage.php";
