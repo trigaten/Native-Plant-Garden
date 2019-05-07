@@ -15,10 +15,8 @@ $endangered = "yam^5";
 include "getImage.php";
 include "printImage.php";
 function displayLvl1($plant){
-$plantname = $plant;
-$directory_plantname = 'images/'.$plantname.".jpg";
+$plantname = $plant; 
 //echo $directory_plantname;
-if (file_exists($directory_plantname)) {
     echo "<table style='width:100%'>";
         echo '<tr><img src=' .$directory_plantname. " alt='error'>";
         echo "<td>$plantname</td>";
@@ -29,18 +27,6 @@ if (file_exists($directory_plantname)) {
         echo "<td>$wetlandStatus</td>";
         echo "<td>$endangered</td>";
         echo "</tr>";
-
-     } 
-    else{
-        $link =  getUrl($plantname);
-        $destdir = 'images/';
-        $img=file_get_contents($link);
-        file_put_contents($destdir.substr($plantname . ".jpg", strrpos("hahaha",'/')), $img);
-        $imgloc = "images/$plantname".".jpg";
-        echo '<img src="' . $imgloc . '" alt="error">'; 
-    }
-}
-
 
 
 
