@@ -1,6 +1,7 @@
 <?php ?>
+<html>
 <link rel="stylesheet" type="text/css" href="page.css">
-<html><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <?php
 //include "getImage.php";
