@@ -6,7 +6,11 @@
 //include "getImage.php";
 //include "printImage.php";
 //.gets location of plant in spreadsheet
-$plantName = "gourd";
+
+
+function Lvl1PlantDisplay($arr){
+
+  $plantName = "gourd";
 $latinName = "gourdous plantanous";
 $image = "Imagepathblahblah";
 
@@ -15,8 +19,9 @@ $growthForm = "yamyam";
 $bloomTime = "yamyamyam";
 $wetlandStatus = "yam^4";
 $endangered = "yam^5";
-
+    
     ?>
+
     <table style="width:100%"> 
       <tr> 
         <td colspan="3">$plantName</td>
@@ -86,7 +91,7 @@ $endangered = "yam^5";
       </tr>
       </table>
         
-        <?php
+        <?php }
         
        
 
