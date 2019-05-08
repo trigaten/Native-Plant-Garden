@@ -1,5 +1,5 @@
 <?php
-
+include "arrayDownloader.php";
 class searchObject {
 
     private $query;
@@ -20,35 +20,34 @@ class searchObject {
     function stringSearch($query){
         $this->query = $query;
         $this->queryWords = explode(" ", $query);
-        $rowsFound = array();
+        $rowsFoundLog = searchArrayFor($this->plantingLog, $query);
+        $rowsFoundCharacteristics = searchArrayFor($this->plantCharacteristics, $query);
+        
+    }
 
-        foreach ($this->plantingLog as $row) {
-            if ($row[1] == $_GET["Name"]){
-            for ($i = 0; $i < sizeof($row); $i++) {
-                if ($i != 1 && $i != 9 && $row[$i] != null){
-                    echo $row[$i]." -- ";
+    function searchArrayFor($array, $query){// returns rows where a match is found
+    //can be improved
+  //  echo "dd";
+
+        $returnArray = array();
+        foreach ($array as $row) {
+            for ($i = 0; $i < sizeof($row); $i++) {//stops here
+                //$found = false;
+                echo "dd";
+                    //if ($found == false){
+                        array_push($returnArray, $row);
+                        if (strpos($row[$i], "$query") !== false) {
+                            $found = true;
+                            array_push($returnArray, $row);
+                                  }              
+               // }
+                //$found = false;
                 }
-                }
-                echo printImage($row[0]);
-                echo "<br>";
-            }
+            
             
         }
-
-        foreach ($this->plantCharacteristics as $row) {
-            if ($row[1] == $_GET["Name"]){
-            for ($i = 0; $i < sizeof($row); $i++) {
-                if ($i != 1 && $i != 9 && $row[$i] != null){
-                    echo $row[$i]." -- ";
-                }
-                }
-                echo printImage($row[0]);
-                echo "<br>";
-            }
-            
-        }
-
-
+        array_push($returnArray, "ff");
+        return $returnArray;
     }
 
     function plantSearch($query){
