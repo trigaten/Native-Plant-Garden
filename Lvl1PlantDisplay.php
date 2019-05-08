@@ -23,7 +23,7 @@ function Lvl1PlantDisplay($arr){
     
     ?>
 
-    <table style="width:100%"> 
+    <table style="width:100%" color='red'> 
       <tr> 
         <td colspan="3">$plantName</td>
       </tr>
