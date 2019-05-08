@@ -6,7 +6,7 @@ $Ob = new searchObject();
 
 $arr = array();
 
-array_push($arr, "ff", "fff", "ff");
+array_push($arr, "ff", "fff", "ff", "ggff", "3333ff");
 
 $getRet = $Ob->searchArrayFor($arr, "ff");
 echo $getRet[0];

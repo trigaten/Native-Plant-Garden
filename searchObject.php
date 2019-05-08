@@ -27,21 +27,19 @@ class searchObject {
 
     function searchArrayFor($array, $query){// returns rows where a match is found
     //can be improved
-  //  echo "dd";
-
         $returnArray = array();
         foreach ($array as $row) {
             for ($i = 0; $i < sizeof($row); $i++) {//stops here
-                //$found = false;
+                $found = false;
                 echo "dd";
-                    //if ($found == false){
+                    if ($found == false){
                         array_push($returnArray, $row);
                         if (strpos($row[$i], "$query") !== false) {
                             $found = true;
                             array_push($returnArray, $row);
                                   }              
-               // }
-                //$found = false;
+                }
+                $found = false;
                 }
             
             
@@ -50,9 +48,24 @@ class searchObject {
         return $returnArray;
     }
 
-    function plantSearch($query){
+    function bedSearch($bedNumber){ //website function
+        $returnArray = array();
 
-
+        foreach ($this->plantingLog as $row) {
+            for ($i = 0; $i < sizeof($row); $i++) {//stops here
+                $found = false;
+                   
+                        array_push($returnArray, $row);
+                        if (strpos($row[$i], "$query") !== false) {
+                            $found = true;
+                            array_push($returnArray, $row);
+                                           
+                }
+                $found = false;
+                }
+            
+            
+        }
 
     }
 
