@@ -22,12 +22,14 @@ $endangered = "yam^5";
         <td colspan="3">$plantName</td>
       </tr>
       <tr>
-        <td>Picture</td>
+        <td><img src="pic_trulli.jpg" alt="Italian Trulli"></td>
         <td>
           <ul style="list-style-type:none">
-          <li>ASDF</li>
-          <li>TSADF</li>
-          <li>MASFD</li>
+          <li>Family: <?php echo($family)?></li>
+          <li>Growth Form: <?php echo($growthForm)?></li>
+          <li>Bloom Time: <?php echo($bloomTime)?></li>
+          <li>Wetland Status: <?php echo($wetlandStatus)?></li>
+          <li>Endangered: <?php echo($endangered)?></li>
           </ul>  
         </td>
         <td><!-- Trigger/Open The Modal -->
