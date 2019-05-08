@@ -95,7 +95,7 @@ $endangered = "yam^5";
         // When the user clicks the button, open the modal 
         btn.onclick = function() {
         modal.style.display = "block";
-}
+        }
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
@@ -111,7 +111,19 @@ $endangered = "yam^5";
         </script>
         </td><?php
         echo "</tr>";
+
+        
         echo "<table>"; 
+
+        echo "<tr>"; 
+        echo ("<td>$plantName</td>");
+        echo ("<td>$latinName</td>");
+        echo ("<td>$family</td>");
+        echo ("<td>$growthForm</td>");
+        echo ("<td>$bloomTime</td>");
+        echo ("<td>$wetlandStatus</td>");
+        echo "</tr>";
+
 
    
 
