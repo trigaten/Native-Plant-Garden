@@ -4,6 +4,8 @@
 <html><meta name="viewport" content="width=device-width, initial-scale=1">
 
 <?php
+include "getImage.php";
+include "printImage.php";
 //.gets location of plant in spreadsheet
 $plantName = "gourd";
 $latinName = "gourdous plantanous";
@@ -15,16 +17,20 @@ $bloomTime = "yamyamyam";
 $wetlandStatus = "yam^4";
 $endangered = "yam^5";
 
-        echo "<table>"; 
-        echo "</tr>"; 
-        echo ("<td>$plantName</td>");
-        echo ("<td>$latinName</td>");
-        echo ("<td>$family</td>");
-        echo ("<td>$growthForm</td>");
-        echo ("<td>$bloomTime</td>");
-        echo ("<td>$wetlandStatus</td>");
-        echo ("<td>$endangered</td>");
-        ?><td><!-- Trigger/Open The Modal -->
+    ?><table> 
+      <tr> 
+        <td colspan="3">$plantName</td>;
+      </tr>
+      <tr>
+        <td>Picture</td>
+        <td>
+          <ul style="list-style-type:none;">
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+          </ul>  
+        </td>
+        <td><!-- Trigger/Open The Modal -->
         <button id="myBtn">Open Modal</button>
         
         <!-- The Modal -->
@@ -91,8 +97,7 @@ $endangered = "yam^5";
 
    
 
-include "getImage.php";
-include "printImage.php";
+
 //function displayLvl1($plant){
 //$plantname = $plant; 
 //echo $directory_plantname;    
