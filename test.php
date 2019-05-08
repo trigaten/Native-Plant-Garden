@@ -1,7 +1,7 @@
 <?php
 
 include "searchObject.php";
-
+include "Lvl1PlantDisplay.php";
 $Ob = new searchObject();
 
 $arr = array();
@@ -26,13 +26,14 @@ $arr = array();
 
 
 $charac = $Ob->getCharacteristicsOf("Adiantum pedatum");
+Lvl1PlantDisplay($charac);
+// for ($x = 0; $x<sizeof($charac);$x++){
+//     echo $charac[$x] . "    ";
+// }
 
-for ($x = 0; $x<sizeof($charac);$x++){
-    echo $charac[$x] . "    ";
-}
-$charac = $Ob->getCharacteristicsOf("Adiantum pedatum");
+// $charac = $Ob->getCharacteristicsOf("Adiantum pedatum");
 
-for ($x = 0; $x<sizeof($charac);$x++){
-    echo $charac[$x] . "    ";
-}
+// for ($x = 0; $x<sizeof($charac);$x++){
+//     echo $charac[$x] . "    ";
+// }
 ?>
