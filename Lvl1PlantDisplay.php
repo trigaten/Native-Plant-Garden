@@ -1,11 +1,10 @@
-<?php 
-?>
+<?php ?>
 <link rel="stylesheet" type="text/css" href="page.css">
 <html><meta name="viewport" content="width=device-width, initial-scale=1">
 
 <?php
-include "getImage.php";
-include "printImage.php";
+//include "getImage.php";
+//include "printImage.php";
 //.gets location of plant in spreadsheet
 $plantName = "gourd";
 $latinName = "gourdous plantanous";
