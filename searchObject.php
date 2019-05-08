@@ -17,7 +17,7 @@ class searchObject {
 
     }
 
-    function stringSearch($query){
+    function stringSearch($query){ //incomplete
         $this->query = $query;
         $this->queryWords = explode(" ", $query);
         $rowsFoundLog = searchArrayFor($this->plantingLog, $query);
@@ -48,25 +48,32 @@ class searchObject {
         return $returnArray;
     }
 
-    function bedSearch($bedNumber){ //website function
+
+
+    function bedSearch($bedNumber){ //website function //returns rows of $bedNumber in plantingLog
         $returnArray = array();
 
         foreach ($this->plantingLog as $row) {
-            for ($i = 0; $i < sizeof($row); $i++) {//stops here
-                $found = false;
-                   
-                        array_push($returnArray, $row);
-                        if (strpos($row[$i], "$query") !== false) {
-                            $found = true;
-                            array_push($returnArray, $row);
-                                           
-                }
-                $found = false;
-                }
-            
-            
-        }
+            if ($row[9] == $bedNumber){
 
+                array_push($returnArray, $row);
+            }
+        }
+        return $returnArray;
+    }
+
+    function getCharacteristicsOf($latinName){ //returns characteristics of $latinName
+
+        foreach ($this->plantCharacteristics as $row) {
+            if ($row[0][0] == $latinName[0]){
+            if ($row[0] == $latinName){
+
+                return $row;
+
+            }
+        }
+    }
+    return "Nottus Foundus";
     }
 
 }
