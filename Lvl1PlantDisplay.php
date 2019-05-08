@@ -25,9 +25,9 @@ $endangered = "yam^5";
         <td>Picture</td>
         <td>
           <ul style="list-style-type:none">
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
+          <li>ASDF</li>
+          <li>TSADF</li>
+          <li>MASFD</li>
           </ul>  
         </td>
         <td><!-- Trigger/Open The Modal -->
