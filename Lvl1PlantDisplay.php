@@ -27,7 +27,7 @@ function Lvl1PlantDisplay($arr){
         <td colspan="3">$plantName</td>
       </tr>
       <tr>
-        <td><img src='<?php echo($latinName) ?>.jpg" alt="error"></td>
+        <td><img src='<?php echo($latinName) ?>.jpg' alt="error"></td>
         <td>
           <ul style="list-style-type:none">
           <li>Family: <?php echo($family)?></li>
