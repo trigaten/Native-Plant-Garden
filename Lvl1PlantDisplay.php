@@ -10,15 +10,15 @@
 
 function Lvl1PlantDisplay($arr){
 
-  $plantName = "gourd";
-$latinName = "gourdous plantanous";
-$image = "Imagepathblahblah";
+  $plantName = $arr[1];
+  $latinName = $arr[0];
+  //$image = $arr[];
 
-$family = "yam";
-$growthForm = "yamyam";
-$bloomTime = "yamyamyam";
-$wetlandStatus = "yam^4";
-$endangered = "yam^5";
+  $family = $arr[4];
+  $growthForm = $arr[3];
+  $bloomTime = $arr[6];
+  $wetlandStatus = $arr[10];
+  $endangered = $arr[11];
     
     ?>
 
@@ -27,7 +27,7 @@ $endangered = "yam^5";
         <td colspan="3">$plantName</td>
       </tr>
       <tr>
-        <td><img src="pic_trulli.jpg" alt="Italian Trulli"></td>
+        <td><img src='<?php echo($latinName) ?>.jpg" alt="error"></td>
         <td>
           <ul style="list-style-type:none">
           <li>Family: <?php echo($family)?></li>
