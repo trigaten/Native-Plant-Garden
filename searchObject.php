@@ -1,4 +1,5 @@
 <?php
+//hard
 include "arrayDownloader.php";
 class searchObject {
 
@@ -7,7 +8,7 @@ class searchObject {
     private $plantingLog;
     private $plantCharacteristics;
 
-    function __construct() {
+    function __construct() { //computer
 
         $arrayGetter = new arrayDownloader(); 
         $this->plantingLog = $arrayGetter->getPlantingLog();
@@ -17,7 +18,7 @@ class searchObject {
 
     }
 
-    function stringSearch($query){ //incomplete
+    function stringSearch($query){ //incomplete //user
         $this->query = $query;
         $this->queryWords = explode(" ", $query);
         $rowsFoundLog = searchArrayFor($this->plantingLog, $query);
@@ -25,7 +26,7 @@ class searchObject {
         
     }
 
-    function searchArrayFor($array, $query){// returns rows where a match is found
+    function searchArrayFor($array, $query){// returns rows where a match is found //computer
     //can be improved
         $returnArray = array();
         foreach ($array as $row) {
@@ -50,7 +51,7 @@ class searchObject {
 
 
 
-    function bedSearch($bedNumber){ //website function //returns rows of $bedNumber in plantingLog
+    function bedSearch($bedNumber){ //computer //returns rows of $bedNumber in plantingLog
         $returnArray = array();
 
         foreach ($this->plantingLog as $row) {
@@ -62,19 +63,48 @@ class searchObject {
         return $returnArray;
     }
 
-    function getCharacteristicsOf($latinName){ //returns characteristics of $latinName
+    function getCharacteristicsOf($latinName){ //returns characteristics of $latinName //computer
 
         foreach ($this->plantCharacteristics as $row) {
-            if ($row[0][0] == $latinName[0]){
             if ($row[0] == $latinName){
+         
 
                 return $row;
 
-            }
+            
         }
     }
     return "Nottus Foundus";
     }
+//TODO
+function searchArrayByLatinName($array, $latinNameQuery){ //takes a possibly innaccurate query //can take string or array //user
+$searchArray = array();
+$returnArray = array();
+    if ($array == $this->plantingLog){
+        $searchArray = $this->plantingLog;
+    } else{
+        if ($array == $this->plantCharacteristics){
+            $searchArray = $this->plantCharacteristics;
+        } else{
+            $searchArray = $array;
+        }
+    }
+
+    foreach ($this->$searchArray as $row) {
+       $latinName = $row[0];
+       $latinName = metaphone($latinName);
+       $latinNameQuery = metaphone($latinNameQuery);
+
+       $sim = similar_text($latinName, $latinNameQuery, $perc);
+       if ($latinName == "Amsonia tabernaemontana"){
+        //array_push($returnArray, $row);
+       }
+       if ($perc >= 91){
+        array_push($returnArray, $row);
+       }
+        }
+    return $returnArray;
+}
 
 }
 ?>
