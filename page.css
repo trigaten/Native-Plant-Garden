@@ -52,16 +52,18 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    color: rgb(245,222,179); 
+    border: 50; 
   }
 
-td, th {
-    border: 1px solid rgb(202, 40, 28);
+td, tr {
+    border: 0px solid rgb(133, 223, 16);
     text-align: left;
-    padding: 8px;
+    padding: 50px;
   }
 
 tr:nth-child(even) {
-    background-color: reg(202, 40, 28);
+    background-color: jk; 
   }
 
 

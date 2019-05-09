@@ -8,27 +8,36 @@
 //include "printImage.php";
 //.gets location of plant in spreadsheet
 
-
-function Lvl1PlantDisplay($arr){
-
-  $plantName = $arr[1];
-  $latinName = $arr[0];
+  $plantName = yam;
+  $latinName = yam;
   //$image = $arr[];
 
-  $family = $arr[4];
-  $growthForm = $arr[3];
-  $bloomTime = $arr[6];
-  $wetlandStatus = $arr[10];
-  $endangered = $arr[11];
+  $family = yam;
+  $growthForm = yam;
+  $bloomTime = yam;
+  $wetlandStatus = yam;
+  $endangered = yam;
+
+//function Lvl1PlantDisplay($arr){
+
+  //$plantName = $arr[1];
+  //$latinName = $arr[0];
+  //$image = $arr[];
+
+  //$family = $arr[4];
+  //$growthForm = $arr[3];
+  //$bloomTime = $arr[6];
+  //$wetlandStatus = $arr[10];
+  //$endangered = $arr[11];
     
     ?>
 
-    <table style="width:100%" color='red'> 
+    <table> 
       <tr> 
         <td colspan="3">$plantName</td>
       </tr>
       <tr>
-        <td><img src='<?php echo($latinName) ?>.jpg' alt="error"></td>
+        <td><img src='images/Rosa virginiana.jpg' alt="error"></td>
         <td>
           <ul style="list-style-type:none">
           <li>Family: <?php echo($family)?></li>
@@ -38,7 +47,7 @@ function Lvl1PlantDisplay($arr){
           <li>Endangered: <?php echo($endangered)?></li>
           </ul>  
         </td>
-        <td><!-- Trigger/Open The Modal -->
+        <td width: 10% ><!-- Trigger/Open The Modal -->
         <button id="myBtn">Open Modal</button>
         
         <!-- The Modal -->
@@ -92,7 +101,7 @@ function Lvl1PlantDisplay($arr){
       </tr>
       </table>
         
-        <?php }
+        <?php //}
         
        
 
