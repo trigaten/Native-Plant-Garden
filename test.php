@@ -1,8 +1,8 @@
 <?php
-
+include "scoreObject.php";
 include "searchObject.php";
 //include "Lvl1PlantDisplay.php";
-$Ob = new searchObject();
+$Ob = new scoreObject("ddddd");
 
 // $arr = array();
 
@@ -78,4 +78,6 @@ echo metaphone("tho");
 // }
 // echo sizeof($arr);
 //echo $Ob->getCharacteristicsOf("Xanthorhiza simplicissima");
+
+
 ?>

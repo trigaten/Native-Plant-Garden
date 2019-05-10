@@ -43,7 +43,7 @@ function setString($string){
 function setMessage($message){
     $this->message = $message;
 }
-
+ 
 
 }
 
