@@ -76,10 +76,15 @@ class searchObject {
     }
     return "Nottus Foundus";
     }
+
+
+
+
 //TODO
 function searchArrayByLatinName($array, $latinNameQuery){ //takes a possibly innaccurate query //can take string or array //user
 $searchArray = array();
 $returnArray = array();
+
     if ($array == $this->plantingLog){
         $searchArray = $this->plantingLog;
     } else{
@@ -105,6 +110,16 @@ $returnArray = array();
         }
     return $returnArray;
 }
+
+
+
+function searchByCertainColumn($column, $query)
+{
+    
+
+    
+}
+
 
 }
 ?>

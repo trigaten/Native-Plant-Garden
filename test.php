@@ -1,7 +1,7 @@
 <?php
 
 include "searchObject.php";
-include "Lvl1PlantDisplay.php";
+//include "Lvl1PlantDisplay.php";
 $Ob = new searchObject();
 
 // $arr = array();
@@ -64,17 +64,18 @@ $Ob = new searchObject();
 // $sim = similar_text($str1, $str2, $perc);
 // echo "similarity: $sim ($perc %)\n";
 
-$arr = $Ob->searchArrayByLatinName("plantCharacteristics", "thor");
-echo "\nddd";
-echo metaphone("tho");
-echo "\nddd";
-$sim = similar_text(metaphone("Xanthorhiza simplicissima"), metaphone("Xanthorhiza simplicissima"), $perc);
+// $arr = $Ob->searchArrayByLatinName("plantCharacteristics", "thor");
+// echo "\nddd";
+// echo metaphone("tho");
+// echo "\nddd";
+$sim = similar_text("tone", "lone", $perc);
 //echo metaphone("Xanthorhiza simplicissima");
 echo "similarity: $sim ($perc %)\n";
-for ($x = 0; $x<sizeof($arr);$x++){
+// for ($x = 0; $x<sizeof($arr);$x++){
+echo metaphone("tho");
 
-    echo $arr[$x][1] . "    ";
-}
-echo sizeof($arr);
+//     echo $arr[$x][1] . "    ";
+// }
+// echo sizeof($arr);
 //echo $Ob->getCharacteristicsOf("Xanthorhiza simplicissima");
 ?>
