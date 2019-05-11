@@ -19,7 +19,7 @@
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #aaa256;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
@@ -52,8 +52,8 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    color: rgb(245,222,179); 
-    border: 50; 
+    color: rgb(267, 222, 179); 
+    border: 80; 
   }
 
 td, tr {
@@ -62,9 +62,7 @@ td, tr {
     padding: 50px;
   }
 
-tr:nth-child(even) {
-    background-color: jk; 
-  }
+
 
 
   

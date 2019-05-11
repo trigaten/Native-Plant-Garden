@@ -8,11 +8,11 @@
 //include "printImage.php";
 //.gets location of plant in spreadsheet
 
-  $plantName = yam;
+  $plantName = yakkkkkkkkkkkm;
   $latinName = yam;
   //$image = $arr[];
 
-  $family = yam;
+  $family = yagggggggm;
   $growthForm = yam;
   $bloomTime = yam;
   $wetlandStatus = yam;
@@ -32,7 +32,7 @@
     
     ?>
 
-    <table> 
+    <table color= black> 
       <tr> 
         <td colspan="3">$plantName</td>
       </tr>
@@ -47,7 +47,7 @@
           <li>Endangered: <?php echo($endangered)?></li>
           </ul>  
         </td>
-        <td width: 10% ><!-- Trigger/Open The Modal -->
+        <td><!-- Trigger/Open The Modal -->
         <button id="myBtn">Open Modal</button>
         
         <!-- The Modal -->
