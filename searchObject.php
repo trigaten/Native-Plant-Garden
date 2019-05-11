@@ -108,12 +108,12 @@ $returnArray = array();
 }
 
 
-
+//SO MESSED UP
 function smartSearch($query)
 {
     $column = 0;
-    $totalPointsPossible = 100;;
-    $columnArray = $this->plantCharacteristics[0];
+    $totalPointsPossible = 100;
+    $columnArray = $this->plantCharacteristics[$column]; //1D array
     $scoreArray = array();
     for ($x = 0; $x < sizeof($columnArray); $x++){
         array_push($scoreArray, 0.0);
@@ -122,6 +122,17 @@ function smartSearch($query)
         if (strpos($columnArray[x][0], $query) !== false) {
             array_push($scoreArray[$x], 100.0);
         }
+    }
+
+
+
+
+    foreach ($this->plantCharacteristics as $row) {
+
+       if (strpos($row[0], $query) !== false) {
+        array_push($scoreArray[$x], 100.0);
+        }
+        
     }
 
     $returnArray = array();
