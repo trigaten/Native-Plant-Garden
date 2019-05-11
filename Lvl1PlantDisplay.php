@@ -1,5 +1,6 @@
 <?php ?>
 <html>
+
 <link rel="stylesheet" type="text/css" href="page.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -34,11 +35,11 @@
 
     <table color= black> 
       <tr> 
-        <td colspan="3">$plantName</td>
+        <td height="10" colspan="3">$plantName</td>
       </tr>
       <tr>
-        <td><img src='images/Rosa virginiana.jpg' alt="error"></td>
-        <td>
+        <td height="120" width="120"><img width="100%" height="100%" src='images/Rosa virginiana.jpg' alt="error"></td>
+        <td padding-left = none>
           <ul style="list-style-type:none">
           <li>Family: <?php echo($family)?></li>
           <li>Growth Form: <?php echo($growthForm)?></li>

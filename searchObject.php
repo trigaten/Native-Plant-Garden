@@ -67,7 +67,7 @@ class searchObject {
     return "Nottus Foundus";
     }
 
-//BELOW IS NOT NOT
+//BELOW IS NOT NOT haha
     function stringSearch($query){ //incomplete //user
         $this->query = $query;
         $this->queryWords = explode(" ", $query);
