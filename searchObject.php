@@ -18,50 +18,39 @@ class searchObject {
 
     }
 
-    function stringSearch($query){ //incomplete //user
-        $this->query = $query;
-        $this->queryWords = explode(" ", $query);
-        $rowsFoundLog = searchArrayFor($this->plantingLog, $query);
-        $rowsFoundCharacteristics = searchArrayFor($this->plantCharacteristics, $query);
-        
-    }
-
-    function searchArrayFor($array, $query){// returns rows where a match is found //computer
-    //can be improved
-        $returnArray = array();
-        foreach ($array as $row) {
-            for ($i = 0; $i < sizeof($row); $i++) {//stops here
-                $found = false;
-                echo "dd";
-                    if ($found == false){
-                        array_push($returnArray, $row);
-                        if (strpos($row[$i], "$query") !== false) {
-                            $found = true;
-                            array_push($returnArray, $row);
-                                  }              
-                }
-                $found = false;
-                }
-            
-            
-        }
-        array_push($returnArray, "ff");
-        return $returnArray;
-    }
-
-
-
     function bedSearch($bedNumber){ //computer //returns rows of $bedNumber in plantingLog
         $returnArray = array();
 
         foreach ($this->plantingLog as $row) {
             if ($row[9] == $bedNumber){
-
                 array_push($returnArray, $row);
             }
         }
         return $returnArray;
     }
+    
+    function searchArrayFor($array, $query){// returns rows where a match is found //computer
+        //can be improved
+            $returnArray = array();
+            foreach ($array as $row) {
+                for ($i = 0; $i < sizeof($row); $i++) {//stops here
+                    $found = false;
+                    echo "dd";
+                        if ($found == false){
+                            array_push($returnArray, $row);
+                            if (strpos($row[$i], "$query") !== false) {
+                                $found = true;
+                                array_push($returnArray, $row);
+                                      }              
+                    }
+                    $found = false;
+                    }
+                
+                
+            }
+            array_push($returnArray, "ff");
+            return $returnArray;
+        }
 
     function getCharacteristicsOf($latinName){ //returns characteristics of $latinName //computer
 
@@ -77,8 +66,14 @@ class searchObject {
     return "Nottus Foundus";
     }
 
-
-
+//BELOW IS NOT NOT
+    function stringSearch($query){ //incomplete //user
+        $this->query = $query;
+        $this->queryWords = explode(" ", $query);
+        $rowsFoundLog = searchArrayFor($this->plantingLog, $query);
+        $rowsFoundCharacteristics = searchArrayFor($this->plantCharacteristics, $query);
+        
+    }
 
 //TODO
 function searchArrayByLatinName($array, $latinNameQuery){ //takes a possibly innaccurate query //can take string or array //user
@@ -113,9 +108,15 @@ $returnArray = array();
 
 
 
-function searchByCertainColumn($column, $query)
+function smartSearch($query)
 {
+    $column = 0;
+    $totalPointsPossible = 100;;
+    $columnArray = $this->plantCharacteristics[0];
     
+
+
+
 
     
 }
