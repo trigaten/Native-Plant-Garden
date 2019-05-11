@@ -1,6 +1,7 @@
 <?php
 //hard
 include "arrayDownloader.php";
+include "scoreObject.php";
 class searchObject {
 
     private $query;
@@ -113,12 +114,27 @@ function smartSearch($query)
     $column = 0;
     $totalPointsPossible = 100;;
     $columnArray = $this->plantCharacteristics[0];
+    $scoreArray = array();
+    for ($x = 0; $x < sizeof($columnArray); $x++){
+        array_push($scoreArray, 0.0);
+    }
+    for ($x = 0; $x < sizeof($columnArray); $x++){
+        if (strpos($columnArray[x][0], $query) !== false) {
+            array_push($scoreArray[$x], 100.0);
+        }
+    }
+
+    $returnArray = array();
+
+    for ($x = 0; $x < sizeof($scoreArray); $x++){
+        if ($scoreArray[$x] >= 0) {
+            //$sob = new searchObject($scoreArray[$x], $scoreArray[$x]);
+            array_push($returnArray, $scoreArray[$x]);
+        }
+    }
+    array_push($returnArray, ["dd", "dd"]);
     
-
-
-
-
-    
+    return $returnArray;
 }
 
 

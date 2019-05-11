@@ -1,8 +1,8 @@
 <?php
-include "scoreObject.php";
+//include "scoreObject.php";
 include "searchObject.php";
 //include "Lvl1PlantDisplay.php";
-$Ob = new scoreObject("ddddd");
+$Ob = new searchObject();
 
 // $arr = array();
 
@@ -31,11 +31,16 @@ $Ob = new scoreObject("ddddd");
 //     echo $charac[$x] . "    ";
 // }
 
-// $charac = $Ob->getCharacteristicsOf("Adiantum pedatum");
-
-// for ($x = 0; $x<sizeof($charac);$x++){
-//     echo $charac[$x] . "    ";
-// }
+ $charac = $Ob->smartSearch("b");
+echo sizeof($charac);
+for ($x = 0; $x<sizeof($charac);$x++){
+    $arr = $charac[$x];
+    echo $arr;
+    // for ($y = 0; $y<sizeof($arr);$y++){
+    // echo $arr[$y] . "   ";
+    // }
+    echo "/n";
+}
 // echo metaphone("Adiantum pedatum");
 // echo "\n";
 // echo metaphone("Adiantum pedatun");
@@ -68,11 +73,11 @@ $Ob = new scoreObject("ddddd");
 // echo "\nddd";
 // echo metaphone("tho");
 // echo "\nddd";
-$sim = similar_text("tone", "lone", $perc);
-//echo metaphone("Xanthorhiza simplicissima");
-echo "similarity: $sim ($perc %)\n";
-// for ($x = 0; $x<sizeof($arr);$x++){
-echo metaphone("tho");
+// $sim = similar_text("tone", "lone", $perc);
+// //echo metaphone("Xanthorhiza simplicissima");
+// echo "similarity: $sim ($perc %)\n";
+// // for ($x = 0; $x<sizeof($arr);$x++){
+// echo metaphone("tho");
 
 //     echo $arr[$x][1] . "    ";
 // }
