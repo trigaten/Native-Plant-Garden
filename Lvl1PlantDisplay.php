@@ -5,31 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <?php
-//include "getImage.php";
-//include "printImage.php";
-//.gets location of plant in spreadsheet
 
-  $plantName = yakkkkkkkkkkkm;
-  $latinName = yam;
+function Lvl1PlantDisplay($arr){
+
+  $plantName = $arr[1];
+  $latinName = $arr[0];
   //$image = $arr[];
 
-  $family = yagggggggm;
-  $growthForm = yam;
-  $bloomTime = yam;
-  $wetlandStatus = yam;
-  $endangered = yam;
-
-//function Lvl1PlantDisplay($arr){
-
-  //$plantName = $arr[1];
-  //$latinName = $arr[0];
-  //$image = $arr[];
-
-  //$family = $arr[4];
-  //$growthForm = $arr[3];
-  //$bloomTime = $arr[6];
-  //$wetlandStatus = $arr[10];
-  //$endangered = $arr[11];
+  $family = $arr[4];
+  $growthForm = $arr[3];
+  $bloomTime = $arr[6];
+  $wetlandStatus = $arr[10];
+  $endangered = $arr[11];
     
     ?>
 
@@ -96,7 +83,7 @@
       </tr>
       </table>
         
-        <?php //}
+        <?php }
         
        
 
