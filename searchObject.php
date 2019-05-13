@@ -19,11 +19,22 @@ class searchObject {
 
     }
 
-    function bedSearch($bedNumber){ //computer //returns rows of $bedNumber in plantingLog
+    function bedSearchbyNumber($bedNumber){ //computer //returns rows of $bedNumber in plantingLog
         $returnArray = array();
 
         foreach ($this->plantingLog as $row) {
             if ($row[9] == $bedNumber){
+                array_push($returnArray, $row);
+            }
+        }
+        return $returnArray;
+    }
+
+    function bedSearchByName($bedName){ //computer //returns rows of $bedNumber in plantingLog
+        $returnArray = array();
+
+        foreach ($this->plantingLog as $row) {
+            if ($row[1] == $bedName){
                 array_push($returnArray, $row);
             }
         }
@@ -49,7 +60,7 @@ class searchObject {
                 
                 
             }
-            array_push($returnArray, "ff");
+            // array_push($returnArray, "ff");
             return $returnArray;
         }
 
@@ -113,7 +124,7 @@ function smartSearch($query)
 {
     $column = 0;
     $totalPointsPossible = 100;
-    $columnArray = $this->plantCharacteristics[$column]; //1D array
+    $columnArray = $this->plantCharacteristics[$column]; //1D array of plant names or whatever the column is that is being searched
     $scoreArray = array();
     for ($x = 0; $x < sizeof($columnArray); $x++){
         array_push($scoreArray, 0.0);
@@ -126,24 +137,31 @@ function smartSearch($query)
 
 
 
-
+    //score adding
     foreach ($this->plantCharacteristics as $row) {
 
-       if (strpos($row[0], $query) !== false) {
-        array_push($scoreArray[$x], 100.0);
+
+       if (strpos(strtolower($row[0]), strtolower($query)) !== false) {
+        array_push($scoreArray, 100.0);
+        }
+
+        if (strpos(metaphone($row[0]), metaphone($query)) !== false) {
+        array_push($scoreArray, 100.0);
         }
         
     }
 
     $returnArray = array();
 
-    for ($x = 0; $x < sizeof($scoreArray); $x++){
-        if ($scoreArray[$x] >= 0) {
-            //$sob = new searchObject($scoreArray[$x], $scoreArray[$x]);
-            array_push($returnArray, $scoreArray[$x]);
+    $counter = 0;
+    foreach ($this->plantCharacteristics as $row) {
+        if ($scoreArray[$counter] >= 100){
+            $ret = new scoreObject($row, $scoreArray[$counter]);
+            array_push($returnArray, $ret);
         }
-    }
-    array_push($returnArray, ["dd", "dd"]);
+         $counter++;
+     }
+
     
     return $returnArray;
 }

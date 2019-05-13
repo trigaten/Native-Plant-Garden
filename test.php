@@ -3,6 +3,20 @@
 include "searchObject.php";
 //include "Lvl1PlantDisplay.php";
 $Ob = new searchObject();
+//echo "ddd";
+$blah =  $Ob->smartSearch("aronia");
+//echo sizeof($blah);
+//echo metaphone("fdsfdsfdsfds");
+
+for ($x = sizeof($blah)-1; $x>-1;$x--){
+    $current = new scoreObject();
+    $info = $current->getInfo();
+    $current =  $blah[$x];
+    $info = $current->getInfo();
+    
+    echo $info;
+    echo "     ";
+}
 
 // $arr = array();
 
@@ -31,16 +45,16 @@ $Ob = new searchObject();
 //     echo $charac[$x] . "    ";
 // }
 
- $charac = $Ob->smartSearch("b");
-echo sizeof($charac);
-for ($x = 0; $x<sizeof($charac);$x++){
-    $arr = $charac[$x];
-    echo $arr;
-    // for ($y = 0; $y<sizeof($arr);$y++){
-    // echo $arr[$y] . "   ";
-    // }
-    echo "/n";
-}
+//  $charac = $Ob->smartSearch("b");
+// echo sizeof($charac);
+// for ($x = 0; $x<sizeof($charac);$x++){
+//     $arr = $charac[$x];
+//     echo $arr;
+//     // for ($y = 0; $y<sizeof($arr);$y++){
+//     // echo $arr[$y] . "   ";
+//     // }
+//     echo "/n";
+// }
 // echo metaphone("Adiantum pedatum");
 // echo "\n";
 // echo metaphone("Adiantum pedatun");
@@ -84,5 +98,7 @@ for ($x = 0; $x<sizeof($charac);$x++){
 // echo sizeof($arr);
 //echo $Ob->getCharacteristicsOf("Xanthorhiza simplicissima");
 
-
+// if (strpos("Aronia arbutifolia ‘Brilliantissima’", "ar") !== false) {
+//     echo "gotem";
+//     }
 ?>

@@ -1,14 +1,14 @@
 <?php
 
 class scoreObject{
-private $string;
+private $info;
 private $score;
 private $message;
 
 function __construct(){
 
     $args = func_get_args;
-    $this->string = $args[0];
+    $this->info = $args[0];
     $this->score = $args[1];
 
     if (sizeof($args>2)){
@@ -23,8 +23,8 @@ function getScore(){
     return $this->score;
 }
 
-function getString(){
-    return $this->string;
+function getInfo(){
+    return $this->info;
 }
 
 function getMessage(){
@@ -36,18 +36,14 @@ function setScore($score){
     $this->score = $score;
 }
 
-function setString($string){
-    $this->string = $string;
+function setInfo($info){
+    $this->info = $info;
 }
 
 function setMessage($message){
     $this->message = $message;
 }
  
-
 }
-
-
-
 
 ?>
