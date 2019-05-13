@@ -1,7 +1,6 @@
 <?php
 
 include "printImage.php";
-//include "arrayDownloader.php";
 include "searchObject.php";
 include "Lvl1PlantDisplay.php";
 
