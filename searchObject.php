@@ -129,12 +129,6 @@ function smartSearch($query)
     for ($x = 0; $x < sizeof($columnArray); $x++){
         array_push($scoreArray, 0.0);
     }
-    for ($x = 0; $x < sizeof($columnArray); $x++){
-        if (strpos($columnArray[x][0], $query) !== false) {
-            array_push($scoreArray[$x], 100.0);
-        }
-    }
-
 
 
     //score adding
