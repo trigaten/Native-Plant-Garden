@@ -122,6 +122,7 @@ $returnArray = array();
 //SO MESSED UP
 function smartSearch($query)
 {
+    $query = strtolower($query);
     $column = 0;
     $totalPointsPossible = 100;
     $columnArray = $this->plantCharacteristics[$column]; //1D array of plant names or whatever the column is that is being searched
@@ -132,31 +133,38 @@ function smartSearch($query)
 
 
     //score adding
+    $counter = 0;
     foreach ($this->plantCharacteristics as $row) {
 
 
        if (strpos(strtolower($row[0]), strtolower($query)) !== false) {
-        array_push($scoreArray, 100.0);
+        $scoreArray[$counter] += 100;
         }
 
         if (strpos(metaphone($row[0]), metaphone($query)) !== false) {
-        array_push($scoreArray, 100.0);
+        $scoreArray[$counter] += 100;
         }
-        
-    }
 
-    $returnArray = array();
+        $sim = similar_text($row[0], $query, $perc);
+        
+        $scoreArray[$counter] += $perc;
+        //echo "similarity: $sim ($perc %)\n";
+        $counter++;
+    }
+    
+     $returnArray = array();
 
     $counter = 0;
     foreach ($this->plantCharacteristics as $row) {
         if ($scoreArray[$counter] >= 100){
-            $ret = new scoreObject($row, $scoreArray[$counter]);
+            $ret = array($row, $scoreArray[$counter]);
             array_push($returnArray, $ret);
         }
          $counter++;
      }
-
-    
+    // $t =  new scoreObject("aaa", 10, "aaa");
+    //  $ret = new scoreObject($t, 100);
+    //  array_push($returnArray, $ret);
     return $returnArray;
 }
 

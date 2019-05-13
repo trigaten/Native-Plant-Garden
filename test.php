@@ -4,20 +4,22 @@ include "searchObject.php";
 //include "Lvl1PlantDisplay.php";
 $Ob = new searchObject();
 //echo "ddd";
-$blah =  $Ob->smartSearch("aronia");
-//echo sizeof($blah);
+$blah =  $Ob->smartSearch("aronnia");
+echo sizeof($blah);
 //echo metaphone("fdsfdsfdsfds");
 
 for ($x = sizeof($blah)-1; $x>-1;$x--){
-    $current = new scoreObject();
-    $info = $current->getInfo();
-    $current =  $blah[$x];
-    $info = $current->getInfo();
     
-    echo $info;
+    
+    $current =  $blah[$x];
+    $info = $current[0];
+    
+    echo $info[0];
+    echo $current[1];
     echo "     ";
 }
-
+// $current = new scoreObject();
+// $info = $current->getInfo();
 // $arr = array();
 
 // array_push($arr, "ff", "fff", "ff", "ggff", "3333ff");
