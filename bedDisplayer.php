@@ -9,6 +9,6 @@ $name = "Forbush Memorial";
 $Object = new searchObject(); 
 $values = $Object->bedSearchByName($name); 
   
-echo(lengthof($values)); 
+echo(sizeof($values)); 
 
 ?>
