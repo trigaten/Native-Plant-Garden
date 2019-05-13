@@ -38,7 +38,7 @@ class searchObject {
                 array_push($returnArray, $row);
             }
         }
-        return $returnArray;
+        return $returnArray; 
     }
     
     function searchArrayFor($array, $query){// returns rows where a match is found //computer
@@ -75,7 +75,7 @@ class searchObject {
             
         }
     }
-    return "Nottus Foundus";
+    return "Nottus Foundous";
     }
 
 //BELOW IS NOT WORKING

@@ -1,11 +1,15 @@
 <?php
+
+include "printImage.php";
+//include "arrayDownloader.php";
 include "searchObject.php";
+include "Lvl1PlantDisplay.php";
 
-$bedPictures = array(); //array of pictures of the bed
-
-$title = $_GET("bed");
-
-$searcher = new SearchObject(); 
-$searchArray -> bedSearchBy
+$name = "Forbush Memorial"; 
+    
+$Object = new searchObject(); 
+$values = $Object->bedSearchByName($name); 
+  
+echo(lengthof($values)); 
 
 ?>
