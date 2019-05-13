@@ -136,19 +136,29 @@ function smartSearch($query)
     $counter = 0;
     foreach ($this->plantCharacteristics as $row) {
 
-
+        //tests if search query is contained in cell
        if (strpos(strtolower($row[0]), strtolower($query)) !== false) {
         $scoreArray[$counter] += 100;
         }
-
+        //tests if metaphone (search query) is contained in cell
         if (strpos(metaphone($row[0]), metaphone($query)) !== false) {
         $scoreArray[$counter] += 100;
         }
-
+        //adds the % similarity found between query and cell
         $sim = similar_text($row[0], $query, $perc);
-        
         $scoreArray[$counter] += $perc;
-        //echo "similarity: $sim ($perc %)\n";
+        //adds the % similarity found between metaphone(query) and metaphone(cell)
+        $sim = similar_text(metaphone($row[0]), metaphone($query), $perc);
+        $scoreArray[$counter] += $perc;
+
+        $explodedQuery = explode($query, " ");
+        if (sizeof($explodedQuery) > 1)
+        {
+            for 
+            
+
+        }
+
         $counter++;
     }
     
