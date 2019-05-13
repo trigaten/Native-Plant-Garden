@@ -154,7 +154,7 @@ function smartSearch($query)
         $explodedQuery = explode($query, " ");
         if (sizeof($explodedQuery) > 1)
         {
-            for 
+           // for 
             
 
         }
