@@ -57,17 +57,11 @@
           <!-- Modal content -->
           <div class="modal-content">
             <span class="close">&times;</span>
-            <p><?php echo "<table>"; 
-                     echo "</tr>"; 
-                     echo ("<td>$plantName</td>");
-                     echo ("<td>$latinName</td>");
-                     echo ("<td>$family</td>");
-                     echo ("<td>$growthForm</td>");
-                     echo ("<td>$bloomTime</td>");
-                     echo ("<td>$wetlandStatus</td>");
-                     echo ("<td>$endangered</td>");
-                     echo "</tr>"; 
-                     echo "</table>";?></p>
+            <p><?php ?> <table>
+                     </tr> 
+                     <td><?php echo($plantName);?></td>
+                     </tr>"; 
+                     </table>";?></p>
           </div>
         
         </div>
