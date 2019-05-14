@@ -6,8 +6,8 @@ include "Lvl1PlantDisplay.php";
 
 $name = "Forbush Memorial"; 
     
-$Object = new searchObject(); 
-$values = $Object->bedSearchByName($name); 
+$Objects = new searchObject(); 
+$values = $Objects->bedSearchByName($name); 
   
 echo(sizeof($values)); 
 
