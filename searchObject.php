@@ -138,11 +138,11 @@ function smartSearch($query)
 
         //tests if search query is contained in cell
        if (strpos(strtolower($row[0]), strtolower($query)) !== false) {
-        $scoreArray[$counter] += 100;
+        $scoreArray[$counter] += 70;
         }
         //tests if metaphone (search query) is contained in cell
         if (strpos(metaphone($row[0]), metaphone($query)) !== false) {
-        $scoreArray[$counter] += 100;
+        $scoreArray[$counter] += 65;
         }
         //adds the % similarity found between query and cell
         $sim = similar_text($row[0], $query, $perc);
@@ -152,9 +152,17 @@ function smartSearch($query)
         $scoreArray[$counter] += $perc;
 
         $explodedQuery = explode($query, " ");
-        if (sizeof($explodedQuery) > 1)
+        $explodedIndexValue = explode($row[0], " ");
+        if (sizeof($explodedQuery) > 1 && sizeof($explodedIndexValue) > 1)
         {
-           // for 
+            $limit = min(sizeof($explodedQuery), sizeof($explodedIndexValue));
+           
+           for ($x = 0; $x < $limit; $x++){
+             if (metaphone($explodedQuery[$x]) == metaphone($explodedIndexValue[$x])){
+                $scoreArray[$counter] += 75;
+             }
+           }
+           
             
 
         }
