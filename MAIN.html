@@ -9,14 +9,16 @@
                     <a href="#contact">Contact Us</a>
                     <div class="topbar-right">
                         <!-- will have an action sending query to some file -->
-                            <form action="/action_page.php" method="get">
-                                <select name="cars">
-                                        <option value="volvo">Volvo</option>
-                                        <option value="saab">Saab</option>
-                                        <option value="fiat">Fiat</option>
-                                        <option value="audi">Audi</option>
+                            <form action="siteSearch.php" method="get">
+                                <select name="searchType">
+                                        <option value="commonName">Common Name</option>
+                                        <option value="latinName">Latin Name</option>
+                                        <option value="growthForm">Growth Form</option>
+                                        <option value="bloomType">Bloom Type</option>
+                                        <option value="wildlifeStatus">Wildlife Status</option>
+                                        <option value="endangered">Endangered</option>
                                       </select>
-                            <a><input type="text" placeholder="Search.."></a>
+                            <a><input type="text" placeholder="Search.." name = "query"></a>
                             
                             </form> 
                           </div>
