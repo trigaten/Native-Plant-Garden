@@ -4,7 +4,7 @@ include "searchObject.php";
 //include "Lvl1PlantDisplay.php";
 $Ob = new searchObject();
 //echo "ddd";
-$blah =  $Ob->smartSearch("ffff");
+$blah =  $Ob->smartSearch("Asi minaa triilboba");
 echo sizeof($blah);
 //echo metaphone("fdsfdsfdsfds");
 

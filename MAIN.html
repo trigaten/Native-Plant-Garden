@@ -1,31 +1,52 @@
 
 <html>
     <head>
-            <link rel="stylesheet" type="text/css" href="page.css">
+            <link rel="stylesheet" type="text/css" href="homepage.css">
+            <div class="topbar">
+                    <a href="Homepage.html">TIDE</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact Us</a>
+                    <div class="topbar-right">
+                        <!-- will have an action sending query to some file -->
+                            <form action="/action_page.php" method="get">
+                                <select name="cars">
+                                        <option value="volvo">Volvo</option>
+                                        <option value="saab">Saab</option>
+                                        <option value="fiat">Fiat</option>
+                                        <option value="audi">Audi</option>
+                                      </select>
+                            <a><input type="text" placeholder="Search.."></a>
+                            
+                            </form> 
+                          </div>
+                  </div>
             <center><h1>Friends School Native Plant Gardens</h1></center>
     </head>
 <body class="setup">
+        <center><p>This is a map of the gardens on Friends School's campus. Clicked on a bed will reveal the number of Native Plants that inhabit it.</p></center>
         <center><p>Click on one of the gardens to learn more about it:</p></center>
-        <div class="topright">SEARCH BAR</div>
+        
+       
         <div>
-        <center><img src="map.jpg" width="700" height="600" alt="Error" usemap="#gardensmap"></center>
+        <center><img src="map.jpg" width="700" height="600" alt="A map of Friends School Gardens" usemap="#gardensmap"></center>
         
         <map name="gardensmap">
-        <area shape="circle" coords="263,45,20" alt="Error" href="displayer.php?Name=Picnic Glade">
-        <area shape="circle" coords="403,67,20" alt="Error" href="displayer.php?Name=MS North">
-        <area shape="circle" coords="308,118,20" alt="Error" href="displayer.php?Name=Forbush Memorial">
-        <area shape="circle" coords="287,190,20" alt="Error" href="displayer.php?Name=staircase">
-        <area shape="circle" coords="187,110,20" alt="Error" href="displayer.php?Name=Redbud Allee (Middle School Easter Elevation)">
-        <area shape="circle" coords="137,103,20" alt="Error" href="displayer.php?Name=Hillside Garden">
-        <area shape="circle" coords="220,205,20" alt="Error" href="displayer.php?Name=Middle School Oak Circle">
-        <area shape="circle" coords="200,263,20" alt="Error" href="displayer.php?Name=Middle School Swale">
-        <area shape="circle" coords="47,330,20" alt="Error" href="displayer.php?Name=Peace Pole">
-        <area shape="circle" coords="390,360,20" alt="Error" href="displayer.php?Name=Lower School Friendship Wall">
-        <area shape="circle" coords="487,345,20" alt="Error" href="displayer.php?Name=Community Garden">
-        <area shape="circle" coords="548,468,20" alt="Error" href="displayer.php?Name=Little Friends swale">
-        <area shape="circle" coords="596,487,20" alt="Error" href="displayer.php?Name=Little Friends Trees & Gardens">
-        <area shape="circle" coords="590,205,20" alt="Error" href="displayer.php?Name=Fallen Tree">
-        <area shape="circle" coords="567,108,20" alt="Error" href="displayer.php?Name=Meetinghouse Raingarden">
+        <area shape="circle" coords="263,45,20" alt="Picnic Glade" href="displayer.php?Name=Picnic Glade">
+        <area shape="circle" coords="403,67,20" alt="MS North" href="displayer.php?Name=MS North">
+        <area shape="circle" coords="308,118,20" alt="Forbush Memorial" href="displayer.php?Name=Forbush Memorial">
+        <area shape="circle" coords="287,190,20" alt="staircase" href="displayer.php?Name=staircase">
+        <area shape="circle" coords="187,110,20" alt="Redbud Allee (Middle School Easter Elevation)" href="displayer.php?Name=Redbud Allee (Middle School Easter Elevation)">
+        <area shape="circle" coords="137,103,20" alt="Hillside Garden" href="displayer.php?Name=Hillside Garden">
+        <area shape="circle" coords="220,205,20" alt="Middle School Oak Circle" href="displayer.php?Name=Middle School Oak Circle">
+        <area shape="circle" coords="200,263,20" alt="Middle School Swale" href="displayer.php?Name=Middle School Swale">
+        <area shape="circle" coords="47,330,20" alt="Peace Pole" href="displayer.php?Name=Peace Pole">
+        <area shape="circle" coords="390,360,20" alt="Lower School Friendship Wall" href="displayer.php?Name=Lower School Friendship Wall">
+        <area shape="circle" coords="487,345,20" alt="Community Garden" href="displayer.php?Name=Community Garden">
+        <area shape="circle" coords="548,468,20" alt="Little Friends swale" href="displayer.php?Name=Little Friends swale">
+        <area shape="circle" coords="596,487,20" alt="Little Friends Trees & Gardens" href="displayer.php?Name=Little Friends Trees & Gardens">
+        <area shape="circle" coords="590,205,20" alt="Fallen Tree" href="displayer.php?Name=Fallen Tree">
+        <area shape="circle" coords="567,108,20" alt="Meetinghouse Raingarden" href="displayer.php?Name=Meetinghouse Raingarden">
         </map>
     </div>
 </body>
