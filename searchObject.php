@@ -119,11 +119,11 @@ $returnArray = array();
 }
 
 
-//SO MESSED UP
-function smartSearch($query)
+// MESSED UP
+function smartSearch($query, $column)
 {
     $query = strtolower($query);
-    $column = 0;
+    //$column = 0;
     $totalPointsPossible = 100;
     $columnArray = $this->plantCharacteristics[$column]; //1D array of plant names or whatever the column is that is being searched
     $scoreArray = array();
@@ -137,35 +137,32 @@ function smartSearch($query)
     foreach ($this->plantCharacteristics as $row) {
 
         //tests if search query is contained in cell
-       if (strpos(strtolower($row[0]), strtolower($query)) !== false) {
+       if (strpos(strtolower($row[$column]), strtolower($query)) !== false) {
         $scoreArray[$counter] += 70;
         }
         //tests if metaphone (search query) is contained in cell
-        if (strpos(metaphone($row[0]), metaphone($query)) !== false) {
+        if (strpos(metaphone($row[$column]), metaphone($query)) !== false) {
         $scoreArray[$counter] += 65;
         }
         //adds the % similarity found between query and cell
-        $sim = similar_text($row[0], $query, $perc);
+        $sim = similar_text($row[$column], $query, $perc);
         $scoreArray[$counter] += $perc;
         //adds the % similarity found between metaphone(query) and metaphone(cell)
-        $sim = similar_text(metaphone($row[0]), metaphone($query), $perc);
+        $sim = similar_text(metaphone($row[$column]), metaphone($query), $perc);
         $scoreArray[$counter] += $perc;
 
-        $explodedQuery = explode($query, " ");
-        $explodedIndexValue = explode($row[0], " ");
-        if (sizeof($explodedQuery) > 1 && sizeof($explodedIndexValue) > 1)
-        {
-            $limit = min(sizeof($explodedQuery), sizeof($explodedIndexValue));
+        // $explodedQuery = explode($query, " ");
+        // $explodedIndexValue = explode($row[$column], " ");
+        // if (sizeof($explodedQuery) > 1 && sizeof($explodedIndexValue) > 1)
+        // {
+        //     $limit = min(sizeof($explodedQuery), sizeof($explodedIndexValue));
            
-           for ($x = 0; $x < $limit; $x++){
-             if (metaphone($explodedQuery[$x]) == metaphone($explodedIndexValue[$x])){
-                $scoreArray[$counter] += 75;
-             }
-           }
-           
-            
-
-        }
+        //    for ($x = 0; $x < $limit; $x++){
+        //      if (metaphone($explodedQuery[$x]) == metaphone($explodedIndexValue[$x])){
+        //         $scoreArray[$counter] += 75;
+        //      }
+        //    }  
+        // }
 
         $counter++;
     }
