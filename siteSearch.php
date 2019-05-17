@@ -1,6 +1,6 @@
 <?php 
 include "searchObject.php";
-
+include "Lvl1PlantDisplay.php";
 $searcher = new searchObject();
 
 $query = $_GET["query"];
@@ -37,11 +37,44 @@ $column = -1;
 break;
 
 }
+$Ob = new searchObject();
+//echo "ddd";
+$blah =  $Ob->smartSearch($query, $column);
+echo sizeof($blah);
+//echo metaphone("fdsfdsfdsfds");
 
-$searcher->smartSearch($query, $column);
+for ($x = sizeof($blah)-1; $x>-1;$x--){
+    
+    
+    $current =  $blah[$x];
+    $info = $current[0];
+    
+    echo Lvl1PlantDisplay($info);
+    //echo $current[1];
+    echo "     ";
+}
+// $results = $searcher->smartSearch($query, 0);
+// for ($x = sizeof($$results)-1; $x>-1;$x--){
+    
+    
+//     $current =  $results[$x];
+//     $info = $current[0];
+    
+//     echo $info[1];
+//     echo $current[1];
+//     echo "     ";
+// }
+// echo sizeof($results);
+// for ($x = 0; x < sizeof($results); $x++){
+//     $current = $result[$x];
+//     //$info = $current[0];
+//     echo $current[0];
+//     //echo "T";
+    
+// //echo Lvl1PlantDisplay($info);
+// }
 
-
-echo "llllll";
+//echo "llllll";
 
 
 

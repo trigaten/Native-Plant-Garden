@@ -15,9 +15,10 @@ function Lvl1PlantDisplay($arr){
   $bloomTime = $arr[6];
   $wetlandStatus = $arr[10];
   $endangered = $arr[11];
-    
+  $src = "images/$latinName.jpg";
    
 return "
+$latinName 
   <link rel='stylesheet' type='text/css' href='page.css'> 
   <meta name='viewport' content='width=device-width, initial-scale=1'>
     <table color= black> 
@@ -25,14 +26,14 @@ return "
         <td height='10' colspan='3'>$plantName</td>
       </tr>
       <tr>
-        <td height='120' width='120'><img width='100%' height='100%' src='images/Rosa virginiana.jpg' alt='error'></td>
+        <td height='120' width='120'><img width='100%' height='100%' src='$src' alt='error'></td>
         <td padding-left = none>
           <ul style='list-style-type:none'>
-          <li>Family: <?php echo($family)?></li>
-          <li>Growth Form: <?php echo($growthForm)?></li>
-          <li>Bloom Time: <?php echo($bloomTime)?></li>
-          <li>Wetland Status: <?php echo($wetlandStatus)?></li>
-          <li>Endangered: <?php echo($endangered)?></li>
+          <li>Family: $family</li>
+          <li>Growth Form: $growthForm</li>
+          <li>Bloom Time: $bloomTime</li>
+          <li>Wetland Status:$wetlandStatus</li>
+          <li>Endangered: $endangered</li>
           </ul>  
         </td>
         <td><!-- Trigger/Open The Modal -->
@@ -44,11 +45,11 @@ return "
           <!-- Modal content -->
           <div class='modal-content'>
             <span class='close'>&times;</span>
-            <p><?php ?> <table>
+            <p> <table>
                      </tr> 
-                     <td><?php echo($plantName);?></td>
-                     </tr>'; 
-                     </table>';?></p>
+                     <td>$plantName</td>
+                     </tr>
+                     </table></p>
           </div>
         
         </div>

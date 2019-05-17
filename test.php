@@ -1,25 +1,24 @@
 <?php
 //include "scoreObject.php";
 include "searchObject.php";
-include "Lvl1PlantDisplay.php";
-// //include "Lvl1PlantDisplay.php";
-// $Ob = new searchObject();
-// //echo "ddd";
-// $blah =  $Ob->smartSearch("maidenhair fern", 1);
-// echo sizeof($blah);
-// //echo metaphone("fdsfdsfdsfds");
+//include "Lvl1PlantDisplay.php";
+//include "Lvl1PlantDisplay.php";
+$Ob = new searchObject();
+//echo "ddd";
+$blah =  $Ob->smartSearch("dwarf blueberry", 1);
+echo sizeof($blah);
+//echo metaphone("fdsfdsfdsfds");
 
-// for ($x = sizeof($blah)-1; $x>-1;$x--){
+for ($x = sizeof($blah)-1; $x>-1;$x--){
     
     
-//     $current =  $blah[$x];
-//     $info = $current[0];
+    $current =  $blah[$x];
+    $info = $current[0];
     
-//     echo $info[0];
-//     echo $current[1];
-//     echo "     ";
-// }
-echo Lvl1PlantDisplay(array());
+    echo $info[1];
+    echo $current[1];
+    echo "     ";
+}
 // $current = new scoreObject();
 // $info = $current->getInfo();
 // $arr = array();

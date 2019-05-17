@@ -123,7 +123,7 @@ $returnArray = array();
 function smartSearch($query, $column)
 {
     $query = strtolower($query);
-    //$column = 0;
+    $column = 1;
     $totalPointsPossible = 100;
     $columnArray = $this->plantCharacteristics[$column]; //1D array of plant names or whatever the column is that is being searched
     $scoreArray = array();
@@ -151,18 +151,21 @@ function smartSearch($query, $column)
         $sim = similar_text(metaphone($row[$column]), metaphone($query), $perc);
         $scoreArray[$counter] += $perc;
 
-        // $explodedQuery = explode($query, " ");
-        // $explodedIndexValue = explode($row[$column], " ");
-        // if (sizeof($explodedQuery) > 1 && sizeof($explodedIndexValue) > 1)
-        // {
-        //     $limit = min(sizeof($explodedQuery), sizeof($explodedIndexValue));
+        if ((strpos($query, " ") !== false) && (strpos($row[$column], " ") !== false))
+        {
+        $explodedQuery = explode($query, " ");
+        $explodedIndexValue = explode($row[$column], " ");
+        if (sizeof($explodedQuery) > 1 && sizeof($explodedIndexValue) > 1)
+        {
+            $limit = min(sizeof($explodedQuery), sizeof($explodedIndexValue));
            
-        //    for ($x = 0; $x < $limit; $x++){
-        //      if (metaphone($explodedQuery[$x]) == metaphone($explodedIndexValue[$x])){
-        //         $scoreArray[$counter] += 75;
-        //      }
-        //    }  
-        // }
+           for ($x = 0; $x < $limit; $x++){
+             if (metaphone($explodedQuery[$x]) == metaphone($explodedIndexValue[$x])){
+                $scoreArray[$counter] += 75;
+             }
+           }  
+        }
+    }
 
         $counter++;
     }
