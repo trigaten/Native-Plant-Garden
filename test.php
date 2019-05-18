@@ -1,24 +1,31 @@
 <?php
 //include "scoreObject.php";
-include "searchObject.php";
-//include "Lvl1PlantDisplay.php";
-//include "Lvl1PlantDisplay.php";
-$Ob = new searchObject();
-//echo "ddd";
-$blah =  $Ob->smartSearch("dwarf blueberry", 1);
-echo sizeof($blah);
-//echo metaphone("fdsfdsfdsfds");
+//include "searchObject.php";
 
-for ($x = sizeof($blah)-1; $x>-1;$x--){
+include "printImage.php";
+
+
+$latinName = "Adiantum pedatum";
+$src = printImage($latinName);
+echo "<img src='$src' >";
+//include "Lvl1PlantDisplay.php";
+//include "Lvl1PlantDisplay.php";
+// $Ob = new searchObject();
+// //echo "ddd";
+// $blah =  $Ob->smartSearch("dwarf blueberry", 1);
+// echo sizeof($blah);
+// //echo metaphone("fdsfdsfdsfds");
+
+// for ($x = sizeof($blah)-1; $x>-1;$x--){
     
     
-    $current =  $blah[$x];
-    $info = $current[0];
+//     $current =  $blah[$x];
+//     $info = $current[0];
     
-    echo $info[1];
-    echo $current[1];
-    echo "     ";
-}
+//     echo $info[1];
+//     echo $current[1];
+//     echo "     ";
+// }
 // $current = new scoreObject();
 // $info = $current->getInfo();
 // $arr = array();
@@ -104,4 +111,31 @@ for ($x = sizeof($blah)-1; $x>-1;$x--){
 // if (strpos("Aronia arbutifolia ‘Brilliantissima’", "ar") !== false) {
 //     echo "gotem";
 //     }
+
+
+
+// $UserInput = "Panicum virgatum 'Squaw'";
+// $FileName = str_replace(array('\'', '"'), '', $UserInput); 
+// echo $FileName;
+// echo $t;
+// echo "\n";
+// echo str_replace("\"", "f", $t);
+// echo "\n";
+// echo str_replace('"', "", $t);
+// echo "\n";
+// echo str_replace("&#39", "", $t);
+// echo "\n";
+// echo str_replace("", "&#39", $t);
+// echo "\n";
+// echo preg_replace("/<!--.*?-->''/", "", $t);
+// echo "\n";
+// echo trim($t, "' '");
+
+
+// for ($x = 0; $x < sizeof($t); $x++){
+//     if ($t[$x] == "/&#39")
+//     $t[$x] = " ";
+// }
+// $t[sizeof($t)] = " ";
+// echo "\n$t"
 ?>

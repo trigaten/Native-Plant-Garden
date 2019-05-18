@@ -65,14 +65,19 @@ class searchObject {
         }
 
     function getCharacteristicsOf($latinName){ //returns characteristics of $latinName //computer
-
+        //if (strpos($latinName, "'") != 0)
+        echo "$latinName";
+        $fixedLatinName = str_replace(array('\'', '"'), '', $latinName); 
+        //echo $fixedLatinName;
         foreach ($this->plantCharacteristics as $row) {
-            if ($row[0] == $latinName){
-         
-
+            //$fixedRowSpot = $row[0];
+            $fixedRowSpot = str_replace(array('\'', '"'), '', $row[0]); 
+            //if (strpos($fixedRowSpot, $fixedLatinName) != 0)
+             if ($fixedLatinName == $fixedRowSpot)
+            {
+    
                 return $row;
-
-            
+         
         }
     }
     return "Nottus Foundous";
@@ -119,7 +124,7 @@ $returnArray = array();
 }
 
 
-// MESSED UP
+// MESSED UP ish
 function smartSearch($query, $column)
 {
     $query = strtolower($query);
