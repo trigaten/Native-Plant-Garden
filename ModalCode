@@ -1,4 +1,6 @@
 <td><!-- Trigger/Open The Modal -->
+<!-- probably need: <meta name="viewport" content="width=device-width, initial-scale=1"> --> 
+
         <button id='myBtn'>Open Modal</button>
         
         <!-- The Modal -->
