@@ -1,6 +1,8 @@
 <?php 
 include "searchObject.php";
 include "Lvl1PlantDisplay.php";
+echo "<link rel='stylesheet' type='text/css' href='page.css'> ";
+echo " <meta name='viewport' content='width=device-width, initial-scale=1'> ";
 $searcher = new searchObject();
 
 $query = $_GET["query"];
@@ -42,7 +44,7 @@ $Ob = new searchObject();
 $blah =  $Ob->smartSearch($query, $column);
 echo sizeof($blah);
 //echo metaphone("fdsfdsfdsfds");
-
+usort($blah, "cmp");
 for ($x = sizeof($blah)-1; $x>-1;$x--){
     
     
@@ -50,7 +52,7 @@ for ($x = sizeof($blah)-1; $x>-1;$x--){
     $info = $current[0];
     
     echo Lvl1PlantDisplay($info);
-    //echo $current[1];
+    echo $current[1];
     echo "     ";
 }
 // $results = $searcher->smartSearch($query, 0);
@@ -77,5 +79,9 @@ for ($x = sizeof($blah)-1; $x>-1;$x--){
 //echo "llllll";
 
 
+function cmp($a, $b)
+{
+    return ($a[1] > $b[1]);
+}
 
 ?>

@@ -1,7 +1,7 @@
 <?php
 //hard
 include "arrayDownloader.php";
-include "scoreObject.php";
+include "objects/scoreObject.php";
 class searchObject {
 
     private $query;
@@ -128,7 +128,7 @@ $returnArray = array();
 function smartSearch($query, $column)
 {
     $query = strtolower($query);
-    $column = 1;
+    //$column = 0;
     $totalPointsPossible = 100;
     $columnArray = $this->plantCharacteristics[$column]; //1D array of plant names or whatever the column is that is being searched
     $scoreArray = array();
@@ -181,6 +181,7 @@ function smartSearch($query, $column)
     foreach ($this->plantCharacteristics as $row) {
         if ($scoreArray[$counter] >= 100){
             $ret = array($row, $scoreArray[$counter]);
+            //$retOb = new scoreObject($ret, $scoreArray[$counter]);
             array_push($returnArray, $ret);
         }
          $counter++;
