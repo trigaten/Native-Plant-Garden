@@ -1,6 +1,5 @@
 <?php
 
-
 include "searchObject.php";
 include "Lvl1PlantDisplay.php";
 
@@ -16,8 +15,11 @@ $values = $Objects->bedSearchByName($name);
 echo(sizeof($values) . " results found for bed $name\n<br>\n<br>"); 
 $lastLatinName = ""; //ensures no repetition
 for ($x = 0; $x < sizeof($values); $x++){
-if ($lastLatinName != $values[$x][0])
-echo Lvl1PlantDisplay($Objects->getCharacteristicsOf($values[$x][0]))."\n";
+if ($lastLatinName != $values[$x][0]){
+$characteristics = $Objects->getCharacteristicsOf($values[$x][0]);
+if ($characteristics != "Nottus Foundus")
+echo Lvl1PlantDisplay($characteristics)."\n";
+    }
 $lastLatinName = $values[$x][0];
 }
 ?>
