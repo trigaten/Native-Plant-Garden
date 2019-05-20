@@ -1,7 +1,7 @@
 <?php
 //hard
 include "arrayDownloader.php";
-include "objects/scoreObject.php";
+include "scoreObject.php";
 class searchObject {
 
     private $query;
