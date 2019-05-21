@@ -1,17 +1,17 @@
 <?php
 
-include "searchObject.php";
+include "searchObject.php";     
 include "Lvl1PlantDisplay.php";
 
-echo "<link rel='stylesheet' type='text/css' href='page.css'> ";
-echo " <meta name='viewport' content='width=device-width, initial-scale=1'> ";
+echo "<link rel='stylesheet' type='text/css' href='page.css'>";
+echo "<meta name='viewport' content='width=device-width, initial-scale=1'>";
 
 $name = "Forbush Memorial"; 
 $name = $_GET['Name'];
 
 $Objects = new searchObject(); 
 $values = $Objects->bedSearchByName($name); 
-  
+
 echo(sizeof($values) . " results found for bed $name\n<br>\n<br>"); 
 $lastLatinName = ""; //ensures no repetition
 for ($x = 0; $x < sizeof($values); $x++){
