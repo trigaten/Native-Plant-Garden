@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<div class="topbar">
+        <a href="MAIN.html">NPTG Teaching Gardens</a>
+        <a href="otherPages/HowItWorks.html">How It Works</a>
+        <a href="otherPages/contact.html">Contact</a>
+        <div class="topbar-right">
+            <!-- will have an action sending query to some file -->
+                <form action="siteSearch.php" method="get">
+                    <select name="searchType">
+                            <option value="commonName">Common Name</option>
+                            <option value="latinName">Latin Name</option>
+                            <option value="growthForm">Growth Form</option>
+                            <option value="family">Family</option>
+                            <option value="bloomType">Bloom Type</option>
+                            <option value="wildlifeStatus">Wildlife Status</option>
+                            <option value="endangered">Endangered</option>
+                            <option value="wholeDatabase">Whole Database</option>
+                          </select>
+                <a><input type="text" placeholder="Search.." name = "query"></a>
+                </form> 
+              </div>
+      </div>
+</html>

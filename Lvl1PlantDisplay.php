@@ -29,7 +29,7 @@ return "
 
     <table color= black> 
       <tr> 
-        <td height='10' colspan='3'>$plantName</td>
+        <td height='10' colspan='3'><center>$plantName</center></td>
       </tr>
       <tr>
         <td height='120' width='120'><img width='100%' height='100%' src='$srcString' alt='er2ror'></td>
