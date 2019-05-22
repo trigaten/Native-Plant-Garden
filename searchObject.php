@@ -41,7 +41,7 @@ class searchObject {
         return $returnArray; 
     }
     
-    function searchArrayFor($array, $query){// returns rows where a match is found //computer
+    function searchArrayFor($array, $query){// returns rows where a match is found //computer // takes 2d array
         //can be improved
             $returnArray = array();
             foreach ($array as $row) {
@@ -60,7 +60,6 @@ class searchObject {
                 
                 
             }
-            // array_push($returnArray, "ff");
             return $returnArray;
         }
 
@@ -84,7 +83,7 @@ class searchObject {
     }
 
 //BELOW IS NOT WORKING
-    function stringSearch($query){ //incomplete //user
+function stringSearch($query){ //incomplete //user
         $this->query = $query;
         $this->queryWords = explode(" ", $query);
         $rowsFoundLog = searchArrayFor($this->plantingLog, $query);
@@ -127,8 +126,14 @@ $returnArray = array();
 // MESSED UP ish
 function smartSearch($query, $column)
 {
+    if ($column == -1){
+        $column = 0;
+        // $keywords = explode($query, " ");
+        // foreach ($keywords as $word){
+            
+        // }
+    }
     $query = strtolower($query);
-    //$column = 0;
     $totalPointsPossible = 100;
     $columnArray = $this->plantCharacteristics[$column]; //1D array of plant names or whatever the column is that is being searched
     $scoreArray = array();

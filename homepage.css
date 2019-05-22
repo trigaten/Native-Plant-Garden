@@ -14,7 +14,10 @@
     overflow: hidden;
     background-color: #333;
     padding: 12px;
+    border-radius: 25px;
+    padding: 20px; 
         }
+
 .topbar a {
      float: center;
      color: #f2f2f2;
