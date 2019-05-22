@@ -8,10 +8,6 @@
 body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
 img {vertical-align: middle;}
-
-
-
-
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
@@ -26,7 +22,7 @@ img {vertical-align: middle;}
 <div class="slideshow-container">
 <?php
   
-  $name = "/images/bedimages/staircase/staircase";
+  $name = "staircase";
   $count = 1; 
   $array=array();
   $exists = true; 
@@ -41,52 +37,48 @@ img {vertical-align: middle;}
   while ($exists == true){
     if (file_exists($name.$count.".jpg")) {
      // foreach (glob($name.=$count.=".jpg") as $image){
-      $array[$count-1] = ($image);
-      echo ("hi"); 
-      echo($name.=$count.".jpg");?><br><?php
+      $array[$count-1] = ($name.$count.".jpg");
+      //echo ("hi"); 
+      //echo($name.$count.".jpg");?><br><?php
       //echo($count); 
       $count++;//}
      }
     else { $exists = false; 
-    echo("hip"); 
+    //echo("hip"); 
     }
   }
-
-  print_r($array); 
+  foreach ($array as $value){
+      echo($value); 
   
-/*
+  
+
   ?>
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="<?php echo($image);?>" style="width:100%">
+  <img src="<?php echo($value);?>" style="width:100%">
   <div class="tt">Caption Text</div>
-</div>
-
+  </div><?php }?> <!--
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
   <img src="staircase2.jpg" style="width:100%">
   <div class="text">Caption</div>
 </div>
-
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
   <img src="staircase1.jpg" style="width:100%">
   <div class="text">Caption Three</div>
-</div><?php
+</div>-><?php
    ?>
 </div>
 <br>
-
 <div style="text-align:center">
   <span class="dot"></span> 
   <span class="dot"></span> 
   <span class="dot"></span> 
 </div>
-
 <script>
 var slideIndex = 0;
 showSlides();
-
 function showSlides() {
   var i;
   var slides = document.getElementsByClassName("mySlides");
