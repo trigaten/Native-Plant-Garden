@@ -3,7 +3,7 @@
 include "arrayDownloader.php";
 include "scoreObject.php";
 class searchObject {
-
+ 
     private $query;
     private $queryWords;
     private $plantingLog;
