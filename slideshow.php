@@ -22,7 +22,7 @@ img {vertical-align: middle;}
 <div class="slideshow-container">
 <?php
   //Needs to have specific file directory
-  $name = "staircase";
+  $name = "/images/bedimages/staircase/staircase";
   $countF = 1; 
   $countI = 1; 
   $array=array();
