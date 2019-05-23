@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html>
 
-<div class="topbar">
-        <a href="MAIN.html">NPTG Teaching Gardens</a>
-        <a href="otherPages/HowItWorks.html">How It Works</a>
-        <a href="otherPages/contact.html">Contact</a>
-        <div class="topbar-right">
-            <!-- will have an action sending query to some file -->
-                <form action="siteSearch.php" method="get">
-                    <select name="searchType">
-                            <option value="commonName">Common Name</option>
-                            <option value="latinName">Latin Name</option>
-                            <option value="growthForm">Growth Form</option>
-                            <option value="family">Family</option>
-                            <option value="bloomType">Bloom Type</option>
-                            <option value="wildlifeStatus">Wildlife Status</option>
-                            <option value="endangered">Endangered</option>
-                            <option value="wholeDatabase">Whole Database</option>
-                          </select>
-                <a><input type="text" placeholder="Search.." name = "query"></a>
-                </form> 
-              </div>
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+      <div class="w3-container">
+        <h3 class="w3-padding-64"><b>Friends School Native Plants Garden<br></b></h3>
       </div>
+      <div class="w3-bar-block">
+        <a href="MAIN.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+        <a href="otherPage/HowItWorks.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">TIDE</a> 
+        <a href="otherPage/contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact Us</a> 
+        <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Projects</a> 
+      </div>
+    
+      </nav>
 </html>
