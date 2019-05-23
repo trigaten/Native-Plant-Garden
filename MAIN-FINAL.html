@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>W3.CSS Template</title>
+<title>Native Plants Teaching Gardens</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="Overall_homepage.css">
 <link rel="stylesheet" type="text/css" href="homepage.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <style>
+
 body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
@@ -22,8 +24,8 @@ body {font-size:16px;}
         </div>
         <div class="w3-bar-block">
           <a href="MAIN.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-          <a href="otherPage/HowItWorks.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">TIDE</a> 
-          <a href="otherPage/contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact Us</a> 
+          <a href="otherPages/HowItWorks.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">TIDE</a> 
+          <a href="otherPages/contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact Us</a> 
           <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Projects</a> 
           <!--<a href="#contac" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact Us</a>-->
         </div>
@@ -53,35 +55,25 @@ body {font-size:16px;}
         <span>Native Plants Teaching Gardens</span>
       </header>
       
-    <!-- Overlay effect when opening sidebar on small screens -->
+    <!--Overlay effect when opening sidebar on small screens --> 
         <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
 
     <!-- Page Content-->
         <div class="w3-main" style="margin-left:340px;margin-right:40px">
-        <center><h1>Interactive Map</h1></center>
     
-        <body class="setup">
-        <center><p>This is a map of the gardens on Friends School's campus. Clicked on a bed will reveal the number of Native Plants that inhabit it.</p></center>
-        <div>
-        <center><img src="images/map.jpg" width="700" height="600" alt="A map of Friends School Gardens" usemap="#gardensmap"></center>
-        
-        <map name="gardensmap">
-        <area shape="circle" coords="263,45,20" alt="Picnic Glade" href="bedDisplayer.php?Name=Picnic Glade">
-        <area shape="circle" coords="403,67,20" alt="MS North" href="bedDisplayer.php?Name=MS North">
-        <area shape="circle" coords="308,118,20" alt="Forbush Memorial" href="bedDisplayer.php?Name=Forbush Memorial">
-        <area shape="circle" coords="287,190,20" alt="staircase" href="bedDisplayer.php?Name=staircase">
-        <area shape="circle" coords="187,110,20" alt="Redbud Allee (Middle School Easter Elevation)" href="bedDisplayer.php?Name=Redbud Allee (Middle School Easter Elevation)">
-        <area shape="circle" coords="137,103,20" alt="Hillside Garden" href="bedDisplayer.php?Name=Hillside Garden">
-        <area shape="circle" coords="220,205,20" alt="Middle School Oak Circle" href="bedDisplayer.php?Name=Middle School Oak Circle">
-        <area shape="circle" coords="200,263,20" alt="Middle School Swale" href="bedDisplayer.php?Name=Middle School Swale">
-        <area shape="circle" coords="47,330,20" alt="Peace Pole" href="bedDisplayer.php?Name=Peace Pole">
-        <area shape="circle" coords="390,360,20" alt="Lower School Friendship Wall" href="bedDisplayer.php?Name=Lower School Friendship Wall">
-        <area shape="circle" coords="487,345,20" alt="Community Garden" href="bedDisplayer.php?Name=Community Garden">
-        <area shape="circle" coords="548,468,20" alt="Little Friends swale" href="bedDisplayer.php?Name=Little Friends swale">
-        <area shape="circle" coords="596,487,20" alt="Little Friends Trees & Gardens" href="bedDisplayer.php?Name=Little Friends Trees & Gardens">
-        <area shape="circle" coords="590,205,20" alt="Fallen Tree" href="bedDisplayer.php?Name=Fallen Tree">
-        <area shape="circle" coords="567,108,20" alt="Meetinghouse Raingarden" href="bedDisplayer.php?Name=Meetinghouse Raingarden">
-        </map>
-    </div>
+        <script>
+                $(function(){
+                  $("#nav-placeholder").load("home.html");
+                });
+                </script>
+<div id="nav-placeholder"></div>
+      sssss
+
+        <div class="footer">
+                <p>Created by TIDE</p>
+        </div>
+
+    
 </body>
 </html>
