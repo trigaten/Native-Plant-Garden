@@ -3,13 +3,7 @@
 <html>
 
 <link rel="stylesheet" type="text/css" href="homepage.css">
-            <div class="topbar">
-                    <a href="MAIN.html">NPTG Teaching Gardens</a>
-                    <a href="otherPages/HowItWorks.html">How It Works</a>
-                    <a href="otherPages/contact.html">Contact</a>
-                  </div>
-
-                  <br>
+        
                   <div class="topbar-right">
                   <form action="siteSearch.php" method="get">
                                 <select name="searchType">
