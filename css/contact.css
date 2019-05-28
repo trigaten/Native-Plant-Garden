@@ -1,3 +1,8 @@
+
+.bg {
+  background-color: #223344
+}
+
 .name {
     font-style: bold;
     text-align: center;
@@ -13,7 +18,7 @@
 .title {
     font-style: bold;
     text-align: center;
-    font-size: 30;
+    font-size: 30px;
 }
 
 .img {
@@ -23,14 +28,14 @@
 
 .titleParagraph {
     text-align: center;
-    font-size: 60px;
+    font-size: 20;
 }
 
 /* Three columns side by side */
 
 .column {
     float: left;
-    width: 33.3%;
+    width: 32.1%;
     margin-bottom: 16px;
     padding: 0 8px;
   }
@@ -63,6 +68,11 @@
   .title {
     color: grey;
   }
+
+  .title2 {
+    color: grey;
+  }
+  
   
   .button {
     border: none;
@@ -79,3 +89,9 @@
   .button:hover {
     background-color: #555;
   }
+
+  .head {
+    background-color: #d24dff;
+  }
+
+ 

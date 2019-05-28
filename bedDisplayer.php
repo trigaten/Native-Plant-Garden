@@ -17,7 +17,7 @@ $lastLatinName = ""; //ensures no repetition
 for ($x = 0; $x < sizeof($values); $x++){
 if ($lastLatinName != $values[$x][0]){
 $characteristics = $Objects->getCharacteristicsOf($values[$x][0]);
-if ($characteristics != "Nottus Foundus")
+if ($characteristics[0] != "N")
 echo Lvl1PlantDisplay($characteristics)."\n";
     }
 $lastLatinName = $values[$x][0];

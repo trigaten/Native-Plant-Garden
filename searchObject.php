@@ -65,7 +65,7 @@ class searchObject {
 
     function getCharacteristicsOf($latinName){ //returns characteristics of $latinName //computer
         //if (strpos($latinName, "'") != 0)
-        echo "$latinName";
+        //echo "$latinName";
         $fixedLatinName = str_replace(array('\'', '"'), '', $latinName); 
         //echo $fixedLatinName;
         foreach ($this->plantCharacteristics as $row) {
@@ -74,7 +74,7 @@ class searchObject {
             //if (strpos($fixedRowSpot, $fixedLatinName) != 0)
              if ($fixedLatinName == $fixedRowSpot)
             {
-    
+                
                 return $row;
          
         }
