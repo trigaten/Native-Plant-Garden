@@ -1,6 +1,6 @@
 body,html,h1,h2,p, div,a,img,header,footer,span,section,nav,aside,article,figure,figcaption{
     margin: 0;
-    padding: 20;
+    padding: 0;
 }
 html{ 
     font-size: 15px;
@@ -10,7 +10,7 @@ body{
 }
 footer,header{
     background: #00b4de; color: #fbfbfb;
-    text-align: center; padding: 2em 20;
+    text-align: center; padding: 2em 0;
 }
 *{box-sizing: border-box;}
 main{
@@ -21,14 +21,12 @@ section{
     width:100%;
     box-shadow: 0 0 10px 2px #ccc;
     padding: 1rem 0;
-
 }
 figure{
     width: calc(100% / 4);
     float: left;
     position: relative;
     margin-bottom: 1rem;
-  
 }
 section::after,section::before{
     content: "";
@@ -41,7 +39,7 @@ figure a{
     display: block;
     height: 100%;
     width: calc(100% - 2rem);
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 figure img{
     width: 100%;
@@ -56,10 +54,7 @@ figcaption{
     margin: 0 1rem;
 }
 
-.border {
-    border-style: solid;
-    border-width: 5px;
-  }
+
 
 
 @media only screen and (max-width:1024px){
@@ -92,4 +87,9 @@ figcaption{
         width:100%;
    }
     
+}
+
+.center{
+    float: center;
+    position: center;
 }
