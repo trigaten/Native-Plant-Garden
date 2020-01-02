@@ -3,7 +3,7 @@ A Google sheet API driven site that displays native plant information from aroun
 
 
 
-# Do not change these folders/files:
+### Do not change these folders/files:
  * folders
    * composer
    * Google
