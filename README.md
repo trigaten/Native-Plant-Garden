@@ -1,4 +1,4 @@
-# Native-Plant-Garden
+# Native-Plant-Gardens
 A Google sheet API driven site that displays native plant information from around the Friends School campus.
 
 
