@@ -3,7 +3,15 @@ A Google sheet API driven site that displays native plant information from aroun
 
 
 
-# Probably really shouldn't don't change these files/folders
+# Do not change these folders/files:
+ * folders
+   * composer
+   * Google
+   * google-api-php-client-2.2.2
  * files
+   * .htaccess
+   * credentials.json
    * servicekey.json
    * composer.phar
+   * README.md
+   
