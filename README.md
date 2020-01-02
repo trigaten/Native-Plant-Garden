@@ -4,6 +4,6 @@ A Google sheet API driven site that displays native plant information from aroun
 
 
 # Probably really shouldn't don't change these files/folders
- ** files
+ *hi * files
  * servicekey.json
  * composer.phar
