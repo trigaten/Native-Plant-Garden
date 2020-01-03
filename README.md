@@ -3,6 +3,9 @@ A Google sheet API driven site that displays native plant information from aroun
 
 ## Features that should be added:
   * Better displays - just all around website needs to be beautified
+  * Search Engine 
+    * Needs to return more accurate results
+    * When displaying results maybe should do color gradient (for example, the more relevant (higher scored) a plant is, the brighter a shade of green it should be displayed in)
 
 ## Do not change these folders/files:
  * folders
