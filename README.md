@@ -35,7 +35,14 @@ Sources data from this Sheet: https://docs.google.com/spreadsheets/d/1v6i3MFlBfT
       * Lvl1PlantDisplay.php - returns a string with the characteristics of a plant formatted within html tags. Part of the return is an image retrieved using:
         * printImage.php - finds and returns an image from where they are stored in images/plantImages/ . If not found, retrieves from internet and saves using:
           * getImage.php - scrapes an image from Google Images
-     * map.html
+     * map.html - this is the MAP. When a circle is clicked on, plant data from that bed is displayed using:
+       * bedDisplayer.php - displays all the plants in that bed with their information using:
+         * searchObject.php
+           * arrayDownloader.php
+         * Lvl1PlantDisplay.php
+           * printImage.php
+           * getImage.php
+           
   
 ## More info:
 This uses the Google Sheets API, but you won't need to write code using it as I have already written methods that do such. Most of this site's core functionality (getting images, searching for plant info, returning this info to display programs) is solid, but the display programs need a lot of work. These are files that will be communicating with the core, receiving data, and using HTML/Javascript/CSS to display it in a manner that will hopefully be much better that it is displayed so far.
