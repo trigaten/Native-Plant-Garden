@@ -3,6 +3,7 @@ sry for typos :) also not an exhaustive list of stuff
 A Google Sheets API driven site that displays native plant information from around the Friends School campus.
 Sources data from this Sheet: https://docs.google.com/spreadsheets/d/1v6i3MFlBfTom7p_WZHs-hK850D2pTg2kk4XJbrLlkd8/edit#gid=1998663239
 ## Knowledge needed
+plz learn from w3schools. It makes things a lot faster: https://www.w3schools.com
   * PHP
     * Basics - variables, loops, objects
     * Special functions - explode(), levenstein()
