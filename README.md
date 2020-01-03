@@ -47,8 +47,8 @@ plz learn from w3schools. It makes things a lot faster: https://www.w3schools.co
 Other files like the composer stuff is used variously, but not important enough to be in this hierarchy. Also, the stuff in the hierarchy (aside from the core) is what needs heavy editing.
   
 ## More info:
-This uses the Google Sheets API, but you won't need to write code using it as I have already written methods that do such. Most of this site's core functionality (getting images, searching for plant info, returning this info to display programs) is solid, but the display programs need a lot of work. These are files that will be communicating with the core, receiving data, and using HTML/Javascript/CSS to display it in a manner that will hopefully be much better that it is displayed so far. 
-Basically people didn't know much HTML while building so we ended up using a bunch of copied stuff for CSS and formatting from W3Schools that we didn't really understand. Try NOT to do this. Even if what you make is simple, understanding it makes it easier to work with add to. Write your own stuff :)
+This uses the Google Sheets API, but you won't need to write code using it as I have already written methods that do such. Most of this site's core functionality (getting images, searching for plant info, returning this info to display programs) is solid, but the display programs need a lot of work. These are files that will be communicating with the core, receiving data, and using HTML/Javascript/CSS to display it in a manner that will hopefully be much better that it is displayed currently. 
+Basically people didn't know much HTML while building so we ended up using a bunch of copied stuff for CSS and formatting from W3Schools that we didn't really understand. Try NOT to do this. Even if what you make is simple, understanding it makes it easier to work with and add to. Plus it feels better to write your own stuff :)
 
 ## Features that should be added:
   * Better displays - just all around website needs to be beautified
