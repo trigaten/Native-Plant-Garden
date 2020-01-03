@@ -23,14 +23,19 @@ Sources data from this Sheet: https://docs.google.com/spreadsheets/d/1v6i3MFlBfT
   * getImage.php - functions that fetch the requested image from where they are stored and if the image is not found searches and downloads it from Google.
   * searchObject.php - object that contains a number of search functions as well as the site Search Engine
   
-## Site breakdown:
+## Site hierarchy breakdown:
   * MAIN-FINAL.html - simply the main page of the site with the following links to other files on it
     * MAIN-FINAL.html - a link back to itself
     * http://tide.friendsbalt.org - a link to the TIDE website
     * contactUs.html - a link to the contact us page
     * HowItWorks.html - a link to a page explaining how the site works
     * siteSearch.php - when the drop down menu/search bar data are entered it is sent here and this program displays the searched for info by using:
-      * searchObject 
+      * searchObject.php - takes search word(s) and goes through database to find good matches. uses:
+        * arrayDownloader.php - gets data from Google Sheet
+      * Lvl1PlantDisplay.php - returns a string with the characteristics of a plant formatted within html tags. Part of the return is an image retrieved using:
+        * printImage.php - finds and returns an image from where they are stored in images/plantImages/ . If not found, retrieves from internet and saves using:
+          * getImage.php - scrapes an image from Google Images
+     * map.html
   
 ## More info:
 This uses the Google Sheets API, but you won't need to write code using it as I have already written methods that do such. Most of this site's core functionality (getting images, searching for plant info, returning this info to display programs) is solid, but the display programs need a lot of work. These are files that will be communicating with the core, receiving data, and using HTML/Javascript/CSS to display it in a manner that will hopefully be much better that it is displayed so far.
