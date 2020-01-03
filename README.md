@@ -1,5 +1,9 @@
 # Native-Plant-Gardens
-A Google sheet API driven site that displays native plant information from around the Friends School campus.
+A Google Sheets API driven site that displays native plant information from around the Friends School campus.
+
+## More info:
+This uses the Google Sheets API, but you won't need to write code using it as I have already written methods that do such
+
 
 ## Features that should be added:
   * Better displays - just all around website needs to be beautified
