@@ -2,6 +2,21 @@ sry for typos :) also not an exhaustive list of stuff
 # Native-Plant-Gardens
 A Google Sheets API driven site that displays native plant information from around the Friends School campus.
 
+## Knowledge needed
+  * PHP
+    * Basics - variables, loops, objects
+    * Special linguistic related functions - explode(), levenstein()
+  * HTML / Javascript / CSS
+    * Knowledge on how to send/receive/interact with data with forms and PHP files
+    * Just a ton of design knowledge using these languages - this is mainly what the site needs (to be beautified)
+    
+## Software required/recommended
+  * Some knowledge of Github (and how to connect it to VSCode so you can work as a team and upload edits)
+  * VSCode - the code compiler you should be working with. I do not recommend Eclipse for a project like this.
+  https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwjg2om6jejmAhUkvFkKHe67Ax8QFjAAegQIDxAC&url=https%3A%2F%2Fcode.visualstudio.com%2F&usg=AOvVaw15O90sm1ios8AUpw56hCml
+  * MAMP - basically a program that lets you set up a local webserver on your computer so you can test the website
+  https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiKv6TujejmAhVtw1kKHT6uAR0QFjAAegQIEBAC&url=https%3A%2F%2Fwww.mamp.info%2Fen%2F&usg=AOvVaw3drr3u1bhleqOKYGpy8sOp
+  
 ## Core file breakdown:
   These are essentially intermediary programs - they talk to the Google API stuff and are controlled with some simplified methods. Additionally they are the backbones of the site and are basically the only files (aside from the DNCs below) that need to be kept should you decide to delete other stuff (though you can (carefully) edit these files).
   * arrayDownloader.php - object that has functions which return the plant chart info (planting log and plant characteristics)
