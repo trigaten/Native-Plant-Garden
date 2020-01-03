@@ -16,7 +16,7 @@ This uses the Google Sheets API, but you won't need to write code using it as I 
   * Search Engine 
     * Needs to return more accurate results
     * When displaying results maybe should do color gradient (for example, the more relevant (higher scored) a plant is, the brighter a shade of green it should be displayed in)
-  * implement a binary search in the searchArrayFor() method in searchObject.php
+  * Implement a binary search in the searchArrayFor() method in searchObject.php
   * Optimize search engine (the smartSearch() method in searchObject.php)
   * A number of small display problems
   * Check Github "projects" list for this repository
