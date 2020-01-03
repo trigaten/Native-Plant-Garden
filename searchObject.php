@@ -1,9 +1,8 @@
 <?php
-/** object which contains a number of functions 
+/** object which contains a number of functions that deal with search the database and returning accurate results
 */
 
 include "arrayDownloader.php";
-include "scoreObject.php";
 class searchObject {
  
     private $query;
@@ -46,13 +45,13 @@ class searchObject {
         return $returnArray; 
     }
     
-    function searchArrayFor($array, $query){// returns rows where a match is found //computer // takes 2d array
-        //can be improved by implemented binary search
+    /** takes 2d array and a keyword and returns a smaller 2d array that contains all rows in which a match was found*/
+    function searchArrayFor($array, $query){
+        //can be improved by implementing a binary search
             $returnArray = array();
             foreach ($array as $row) {
                 for ($i = 0; $i < sizeof($row); $i++) {
                     $found = false;
-                    echo "dd";
                         if ($found == false){
                             array_push($returnArray, $row);
                             if (strpos($row[$i], "$query") !== false) {
@@ -62,46 +61,35 @@ class searchObject {
                     }
                     $found = false;
                     }
-                
-                
             }
             return $returnArray;
         }
 
-    function getCharacteristicsOf($latinName){ //returns characteristics of $latinName //computer
-        //if (strpos($latinName, "'") != 0)
-        //echo "$latinName";
+    /** takes the latin name of a plant and returns the row with its characteristics */
+    function getCharacteristicsOf($latinName){
         $fixedLatinName = str_replace(array('\'', '"'), '', $latinName); 
-        //echo $fixedLatinName;
+
         foreach ($this->plantCharacteristics as $row) {
-            //$fixedRowSpot = $row[0];
             $fixedRowSpot = str_replace(array('\'', '"'), '', $row[0]); 
-            //if (strpos($fixedRowSpot, $fixedLatinName) != 0)
              if ($fixedLatinName == $fixedRowSpot)
             {
-                
                 return $row;
-         
         }
     }
-    return "Nottus Foundous";
+    return "Nottus Foundous"; //what gets returned if nothing is found  (notttt and actual plant name)
     }
 
-/** search engine methodtakes a word to search for and a column (like family or common name) represented 
+/** SEARCH ENGINE METHOD - takes a word to search for and a column (like family or common name) represented 
  * as a number and returns the closest results using a number of strategies including phonetic similarity
  * (how similar words sound if spoken) and Levenstein distances
- * This method could use some signifigant fine tuning
- * 
+ * This method could use some significant fine tuning
 */
 function smartSearch($query, $column)
 {
     if ($column == -1){
         $column = 0;
-        // $keywords = explode($query, " ");
-        // foreach ($keywords as $word){
-            
-        // }
-    }
+    } 
+
     $query = strtolower($query);
     $totalPointsPossible = 100;
     $columnArray = $this->plantCharacteristics[$column]; //1D array of plant names or whatever the column is that is being searched
@@ -109,7 +97,6 @@ function smartSearch($query, $column)
     for ($x = 0; $x < sizeof($columnArray); $x++){
         array_push($scoreArray, 0.0);
     }
-
 
     //score adding
     $counter = 0;
@@ -155,28 +142,25 @@ function smartSearch($query, $column)
     foreach ($this->plantCharacteristics as $row) {
         if ($scoreArray[$counter] >= 100){
             $ret = array($row, $scoreArray[$counter]);
-            //$retOb = new scoreObject($ret, $scoreArray[$counter]);
             array_push($returnArray, $ret);
         }
          $counter++;
      }
-    // $t =  new scoreObject("aaa", 10, "aaa");
-    //  $ret = new scoreObject($t, 100);
-    //  array_push($returnArray, $ret);
+    
     return $returnArray;
-}
+    
+} //the end of this long search engine method lol
 
 
 //*********************** 
-//ALL CODE BELOW IS NOT WORKING
+//ALL CODE BELOW IS NOT WORKING (but should be worked on in future)
 //*********************** 
-
 
 function stringSearch($query){ //incomplete //user
         $this->query = $query;
         $this->queryWords = explode(" ", $query);
-        $rowsFoundLog = searchArrayFor($this->plantingLog, $query);
-        $rowsFoundCharacteristics = searchArrayFor($this->plantCharacteristics, $query);
+        // $rowsFoundLog = searchArrayFor($this->plantingLog, $query);
+        // $rowsFoundCharacteristics = searchArrayFor($this->plantCharacteristics, $query);
         
     }
 

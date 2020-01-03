@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<!-- This html/php constructions gets a bed name-->
 <html>
 
 <link rel="stylesheet" type="text/css" href="homepage.css">
@@ -70,7 +71,7 @@ break;
 
 $results =  $Ob->smartSearch($query, $column);
 echo sizeof($results) . " results found for \"" . $query . "\"  in " . $searchType;
-usort($results, "cmp");
+usort($results, "cmp"); //sorts array based on score using below "cmp" method
 for ($x = sizeof($results)-1; $x>-1;$x--){
     
     
@@ -78,12 +79,10 @@ for ($x = sizeof($results)-1; $x>-1;$x--){
     $info = $current[0];
     
     echo Lvl1PlantDisplay($info);
-    //echo $current[1];
     echo "     ";
 }
 
-
-
+/** a necessary function to sort the array by score */
 function cmp($a, $b)
 {
     return ($a[1] > $b[1]);

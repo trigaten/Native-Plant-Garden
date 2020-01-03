@@ -28,7 +28,6 @@ function getUrl($query) {
     return $image_url; 
 }
 
-
 function curl($url){
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL,$url);

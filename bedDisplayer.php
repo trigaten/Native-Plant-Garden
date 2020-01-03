@@ -1,4 +1,5 @@
 <?php
+/** displays the info in a single bed (used when a bed is clicked on in the map) */
 
 include "searchObject.php";     
 include "Lvl1PlantDisplay.php";
@@ -13,7 +14,7 @@ $Objects = new searchObject();
 $values = $Objects->bedSearchByName($name); 
 
 echo(sizeof($values) . " results found for bed $name\n<br>\n<br>"); 
-$lastLatinName = ""; //ensures no repetition
+$lastLatinName = ""; //empty string ensures no repetition
 for ($x = 0; $x < sizeof($values); $x++){
 if ($lastLatinName != $values[$x][0]){
 $characteristics = $Objects->getCharacteristicsOf($values[$x][0]);
