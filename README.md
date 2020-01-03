@@ -59,6 +59,7 @@ Basically people didn't know much HTML while building so we ended up using a bun
   * Optimize search engine (the smartSearch() method in searchObject.php)
   * A number of small display problems
   * Get rid of w3schools css and formatting stuff in exchange for our own
+  * Literally the whole "how it works" file
   * Check Github "projects" list for this repository
   * Include TIDE water mark on all pages
   * Whatever y'all think
