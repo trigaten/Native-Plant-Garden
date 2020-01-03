@@ -4,7 +4,8 @@ A Google Sheets API driven site that displays native plant information from arou
 ## More info:
 This uses the Google Sheets API, but you won't need to write code using it as I have already written methods that do such
 
-## Core file breakdown (These are the PHP files that are necessary for the site to run and for you to understand):
+## Core file breakdown:
+  These are essentially intermediary programs - they talk to the Google API stuff and are controlled with some simplified methods. Additionally they are the backbones of the site and are basically the the only files (aside from the DNCs below) that need to be kept should you decide to delete other stuff (though you can (carefully) edit these files).
   * arrayDownloader.php - object that has function which return the plant chart info (planting log and plant characteristics)
   * getImage.php - functions that fetch the requested image from where they are stored and if the image is not found searches and downloads it from Google.
   * searchObject.php - object that contains a number of search functions as well as the site Search Engine
@@ -22,7 +23,7 @@ This uses the Google Sheets API, but you won't need to write code using it as I 
   * Whatever y'all think
   
 
-## Do not change these folders/files:
+## Do not change (DNC) these folders/files:
  * folders
    * composer
    * Google
