@@ -1,4 +1,4 @@
-sry for typos :) also in no way an exhaustive list of stuff
+sry for typos :) also not an exhaustive list of stuff
 # Native-Plant-Gardens
 A Google Sheets API driven site that displays native plant information from around the Friends School campus.
 
