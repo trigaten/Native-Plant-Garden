@@ -6,7 +6,6 @@ function getImage($query) {
     return '<img src="' . $image_url . '" alt="error">'; 
 }
 
-
 function getUrl($query) {
     $search_query = ""; //set this variable empty string (this may or may not be necessary :D)
     $search_query = $query;
@@ -28,6 +27,7 @@ function getUrl($query) {
     return $image_url; 
 }
 
+/** Who knows what this does, but definitely don't delete it */
 function curl($url){
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL,$url);

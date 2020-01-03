@@ -1,9 +1,10 @@
 
-
-
 <?php
+/** contains a single function to return an html string with data put into it */
 include "printImage.php";
-
+/** takes a 1d array of plant characteristics and returns a string that contains html figures with the data input
+ * This string can then be displayed in a nice way
+*/
 function Lvl1PlantDisplay($arr){
 
   $latinName = $arr[0];

@@ -3,9 +3,9 @@ include "getImage.php";
 function printImage($plant){
 $plantname = $plant;
 $directory_plantname = 'images/plantImages/'.$plantname.".jpg";
-//echo $directory_plantname;
+
 if (file_exists($directory_plantname)) {
-return $directory_plantname;//'<img src="' . $directory_plantname . '" alt="error">'; 
+return $directory_plantname;
      } 
     else{
         $link =  getUrl($plantname);
