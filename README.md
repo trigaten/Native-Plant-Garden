@@ -23,7 +23,7 @@ Sources data from this Sheet: https://docs.google.com/spreadsheets/d/1v6i3MFlBfT
   * getImage.php - functions that fetch the requested image from where they are stored and if the image is not found searches and downloads it from Google.
   * searchObject.php - object that contains a number of search functions as well as the site Search Engine
   
-## Site hierarchy breakdown:
+## General site hierarchy:
   * MAIN-FINAL.html - simply the main page of the site with the following links to other files on it
     * MAIN-FINAL.html - a link back to itself
     * http://tide.friendsbalt.org - a link to the TIDE website
@@ -43,9 +43,11 @@ Sources data from this Sheet: https://docs.google.com/spreadsheets/d/1v6i3MFlBfT
            * printImage.php
            * getImage.php
            
+Other files like the composer stuff is used variously, but not important enough to be in this hierarchy. Also, the stuff in the hierarchy (aside from the core) is what needs heavy editing.
   
 ## More info:
-This uses the Google Sheets API, but you won't need to write code using it as I have already written methods that do such. Most of this site's core functionality (getting images, searching for plant info, returning this info to display programs) is solid, but the display programs need a lot of work. These are files that will be communicating with the core, receiving data, and using HTML/Javascript/CSS to display it in a manner that will hopefully be much better that it is displayed so far.
+This uses the Google Sheets API, but you won't need to write code using it as I have already written methods that do such. Most of this site's core functionality (getting images, searching for plant info, returning this info to display programs) is solid, but the display programs need a lot of work. These are files that will be communicating with the core, receiving data, and using HTML/Javascript/CSS to display it in a manner that will hopefully be much better that it is displayed so far. 
+Basically people didn't know much HTML while building so we ended up using a bunch of copied stuff for CSS and formatting from W3Schools that we didn't really understand. Try NOT to do this. Even if what you make is simple, understanding it makes it easier to work with add to. Write your own stuff :)
 
 ## Features that should be added:
   * Better displays - just all around website needs to be beautified
@@ -55,6 +57,7 @@ This uses the Google Sheets API, but you won't need to write code using it as I 
   * Implement a binary search in the searchArrayFor() method in searchObject.php
   * Optimize search engine (the smartSearch() method in searchObject.php)
   * A number of small display problems
+  * Get rid of w3schools css and formatting stuff in exchange for our own
   * Check Github "projects" list for this repository
   * Include TIDE water mark on all pages
   * Whatever y'all think
