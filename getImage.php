@@ -1,18 +1,18 @@
 <?php
-
+/** contains a number of methods that scrape images */
 
 function getImage($query) {
     $image_url = getURL($query);
     return '<img src="' . $image_url . '" alt="error">'; 
 }
 
+
 function getUrl($query) {
-    $search_query = "car";
+    $search_query = ""; //set this variable empty string (this may or may not be necessary :D)
     $search_query = $query;
     $search_query = urlencode($search_query);
     $search_query = "https://www.google.com/search?q=".$search_query."&tbm=isch";
     $string = curl($search_query); //string with data
-
 
     libxml_use_internal_errors(true);
     $dom = new DOMDocument;
@@ -37,9 +37,6 @@ function curl($url){
     curl_close ($ch);
     return $return;
 }
-
-
-//echo $string;
 
 ?>
 

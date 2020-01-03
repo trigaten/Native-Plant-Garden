@@ -25,7 +25,7 @@
 include "searchObject.php";
 include "Lvl1PlantDisplay.php";
 
-    echo "<link rel='stylesheet' type='text/css' href='page.css'> ";
+    echo "<link rel='stylesheet' type='text/css' href='css/searchResultItem.css'> ";
     echo " <meta name='viewport' content='width=device-width, initial-scale=1'> ";
 
 $searcher = new searchObject();

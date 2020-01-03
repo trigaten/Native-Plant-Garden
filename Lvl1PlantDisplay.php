@@ -3,8 +3,7 @@
 
 <?php
 include "printImage.php";
-// <!-- <link rel="stylesheet" type="text/css" href="page.css"> -->
-// <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
 function Lvl1PlantDisplay($arr){
 
   $latinName = $arr[0];
@@ -21,10 +20,7 @@ function Lvl1PlantDisplay($arr){
 
   $srcString = printImage($latinName);
 
-  //echo "$arr";
-  // $latinName 
-  // <link rel='stylesheet' type='text/css' href='page.css'> 
-  // <meta name='viewport' content='width=device-width, initial-scale=1'>
+
 return "
 
     <table color= black> 

@@ -1,5 +1,7 @@
 <?php
-//hard
+/** object which contains a number of functions 
+*/
+
 include "arrayDownloader.php";
 include "scoreObject.php";
 class searchObject {
@@ -9,17 +11,18 @@ class searchObject {
     private $plantingLog;
     private $plantCharacteristics;
 
-    function __construct() { //computer
-
+    /** constructor */
+    function __construct() {
         $arrayGetter = new arrayDownloader(); 
         $this->plantingLog = $arrayGetter->getPlantingLog();
         $this->plantCharacteristics = $arrayGetter->getPlantCharacteristics();
-        $this->query = "Plantanus Robbinus";
-        $this->queryWords = explode(" ", $this->query);
-
+        $this->query = "Plantanus Robbinus"; //initialize query word to random string
+        $this->queryWords = explode(" ", $this->query); //initializes an array of n strings where n will be the number of words separated by spaces in $query 
     }
 
-    function bedSearchbyNumber($bedNumber){ //computer //returns rows of $bedNumber in plantingLog
+    /** takes an int which represents one of the beds and returns a 2d array containing all 
+     * plants and their info that are in that bed */
+    function bedSearchbyNumber($bedNumber){
         $returnArray = array();
 
         foreach ($this->plantingLog as $row) {
@@ -30,7 +33,9 @@ class searchObject {
         return $returnArray;
     }
 
-    function bedSearchByName($bedName){ //computer //returns rows of $bedNumber in plantingLog
+    /** takes a string which is the name of one of the beds and returns a 2d array containing all 
+     * plants and their info that are in that bed */
+    function bedSearchByName($bedName){
         $returnArray = array();
 
         foreach ($this->plantingLog as $row) {
@@ -42,10 +47,10 @@ class searchObject {
     }
     
     function searchArrayFor($array, $query){// returns rows where a match is found //computer // takes 2d array
-        //can be improved
+        //can be improved by implemented binary search
             $returnArray = array();
             foreach ($array as $row) {
-                for ($i = 0; $i < sizeof($row); $i++) {//stops here
+                for ($i = 0; $i < sizeof($row); $i++) {
                     $found = false;
                     echo "dd";
                         if ($found == false){
@@ -82,48 +87,12 @@ class searchObject {
     return "Nottus Foundous";
     }
 
-//BELOW IS NOT WORKING
-function stringSearch($query){ //incomplete //user
-        $this->query = $query;
-        $this->queryWords = explode(" ", $query);
-        $rowsFoundLog = searchArrayFor($this->plantingLog, $query);
-        $rowsFoundCharacteristics = searchArrayFor($this->plantCharacteristics, $query);
-        
-    }
-
-//TODO
-function searchArrayByLatinName($array, $latinNameQuery){ //takes a possibly innaccurate query //can take string or array //user
-$searchArray = array();
-$returnArray = array();
-
-    if ($array == $this->plantingLog){
-        $searchArray = $this->plantingLog;
-    } else{
-        if ($array == $this->plantCharacteristics){
-            $searchArray = $this->plantCharacteristics;
-        } else{
-            $searchArray = $array;
-        }
-    }
-
-    foreach ($this->$searchArray as $row) {
-       $latinName = $row[0];
-       $latinName = metaphone($latinName);
-       $latinNameQuery = metaphone($latinNameQuery);
-
-       $sim = similar_text($latinName, $latinNameQuery, $perc);
-       if ($latinName == "Amsonia tabernaemontana"){
-        //array_push($returnArray, $row);
-       }
-       if ($perc >= 91){
-        array_push($returnArray, $row);
-       }
-        }
-    return $returnArray;
-}
-
-
-// MESSED UP ish
+/** search engine methodtakes a word to search for and a column (like family or common name) represented 
+ * as a number and returns the closest results using a number of strategies including phonetic similarity
+ * (how similar words sound if spoken) and Levenstein distances
+ * This method could use some signifigant fine tuning
+ * 
+*/
 function smartSearch($query, $column)
 {
     if ($column == -1){
@@ -198,5 +167,48 @@ function smartSearch($query, $column)
 }
 
 
+//*********************** 
+//ALL CODE BELOW IS NOT WORKING
+//*********************** 
+
+
+function stringSearch($query){ //incomplete //user
+        $this->query = $query;
+        $this->queryWords = explode(" ", $query);
+        $rowsFoundLog = searchArrayFor($this->plantingLog, $query);
+        $rowsFoundCharacteristics = searchArrayFor($this->plantCharacteristics, $query);
+        
+    }
+
+//TODO
+function searchArrayByLatinName($array, $latinNameQuery){ //takes a possibly innaccurate query //can take string or array //user
+$searchArray = array();
+$returnArray = array();
+
+    if ($array == $this->plantingLog){
+        $searchArray = $this->plantingLog;
+    } else{
+        if ($array == $this->plantCharacteristics){
+            $searchArray = $this->plantCharacteristics;
+        } else{
+            $searchArray = $array;
+        }
+    }
+
+    foreach ($this->$searchArray as $row) {
+       $latinName = $row[0];
+       $latinName = metaphone($latinName);
+       $latinNameQuery = metaphone($latinNameQuery);
+
+       $sim = similar_text($latinName, $latinNameQuery, $perc);
+       if ($latinName == "Amsonia tabernaemontana"){
+        //array_push($returnArray, $row);
+       }
+       if ($perc >= 91){
+        array_push($returnArray, $row);
+       }
+        }
+    return $returnArray;
+}
 }
 ?>
