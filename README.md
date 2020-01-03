@@ -1,15 +1,15 @@
 # Native-Plant-Gardens
 A Google Sheets API driven site that displays native plant information from around the Friends School campus.
 
-## More info:
-This uses the Google Sheets API, but you won't need to write code using it as I have already written methods that do such
-
 ## Core file breakdown:
   These are essentially intermediary programs - they talk to the Google API stuff and are controlled with some simplified methods. Additionally they are the backbones of the site and are basically the the only files (aside from the DNCs below) that need to be kept should you decide to delete other stuff (though you can (carefully) edit these files).
   * arrayDownloader.php - object that has function which return the plant chart info (planting log and plant characteristics)
   * getImage.php - functions that fetch the requested image from where they are stored and if the image is not found searches and downloads it from Google.
   * searchObject.php - object that contains a number of search functions as well as the site Search Engine
   
+## More info:
+This uses the Google Sheets API, but you won't need to write code using it as I have already written methods that do such. Most of this site's core functionality (getting images, searching for plant info, returning this info to display programs) is solid, but the display programs need a lot of work. These are files that will be communicating with the core, receiving data, and using HTML/Javascript/CSS to display it in a manner that will hopefully be much better that it is displayed so far.
+
 
 ## Features that should be added:
   * Better displays - just all around website needs to be beautified
