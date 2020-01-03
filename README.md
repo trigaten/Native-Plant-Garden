@@ -5,7 +5,7 @@ Sources data from this Sheet: https://docs.google.com/spreadsheets/d/1v6i3MFlBfT
 ## Knowledge needed
   * PHP
     * Basics - variables, loops, objects
-    * Special linguistic related functions - explode(), levenstein()
+    * Special functions - explode(), levenstein()
   * HTML / Javascript / CSS
     * Knowledge on how to send/receive/interact with data with forms and PHP files
     * Just a ton of design knowledge using these languages - this is mainly what the site needs (to be beautified)
