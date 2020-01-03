@@ -1,5 +1,8 @@
 <?php
-/** tests that connection to spreadsheet is working */
+/** tests that connection to spreadsheet is working 
+ * unimportant function, just a test
+*/
+
 echo "Test1";
 require_once 'google-api-php-client-2.2.2/vendor/autoload.php';
     echo "Test2";

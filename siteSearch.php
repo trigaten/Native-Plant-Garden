@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<!-- This html/php constructions gets a bed name-->
+<!-- This html/php constructions gets a bed name and displays the plants in that bed-->
 <html>
 
 <link rel="stylesheet" type="text/css" href="homepage.css">

@@ -25,6 +25,7 @@ class arrayDownloader {
             
         return $values;
             }
+            
     /** returns 2d plant characteristics array as it is in Google Sheet*/
     function getPlantCharacteristics(){
         $range = 'Plant characteristics and notes';
