@@ -1,5 +1,5 @@
 <?php
-/** displays the info in a single bed (used when a bed is clicked on in the map) */
+/** displays all plant info in a single bed (used when a bed is clicked on in the map) */
 
 include "searchObject.php";     
 include "Lvl1PlantDisplay.php";

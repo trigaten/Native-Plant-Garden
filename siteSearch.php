@@ -39,7 +39,7 @@ $searchType = $_GET["searchType"];
 
 
 $column;
-
+//changes string to int to pass to smart search method
 switch($searchType){
 case  "latinName":
 $column = 0;

@@ -1,11 +1,12 @@
 <?php
 /** contains a number of methods that scrape images */
 
+/** takes a query word and returns the html formatted image */
 function getImage($query) {
     $image_url = getURL($query);
     return '<img src="' . $image_url . '" alt="error">'; 
 }
-
+/** takes a query word and searches Google Images for it and returns the URL */
 function getUrl($query) {
     $search_query = ""; //set this variable empty string (this may or may not be necessary :D)
     $search_query = $query;

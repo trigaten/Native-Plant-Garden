@@ -1,5 +1,10 @@
 <?php 
+/** containts function which returns requested image */
 include "getImage.php";
+
+/** returns the image corresponding to the given plant and if said image is not in the imaages folders
+ * it grabs it from Google Images and and puts it in the folder and returns it as well
+ */
 function printImage($plant){
 $plantname = $plant;
 $directory_plantname = 'images/plantImages/'.$plantname.".jpg";
