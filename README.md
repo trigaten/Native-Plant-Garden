@@ -62,6 +62,7 @@ Basically people didn't know much HTML while building so we ended up using a bun
   * Literally the whole "how it works" file
   * Check Github "projects" list for this repository
   * Include TIDE water mark on all pages
+  * Just a ton of features like letting students edit plant info and have teacher and student profiles for the website - this would possibly involve connecting the site to Blackbaud login systems which would probably be very difficult and seen as a security vulnerability by Blackbaud
   * Whatever y'all think
   
 ## Do not change these folders/files (DNCs):
